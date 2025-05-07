@@ -12,20 +12,11 @@
             :key="index"
             class="logo-item"
           >
-            <div class="px-8 py-4">
-              <!-- Плейсхолдер для логотипа (замените на изображение) -->
-              <div class="h-16 flex items-center justify-center">
-                <div v-if="false">
-                  <img
-                    :src="client.logo"
-                    :alt="client.name"
-                    class="max-h-12 max-w-full"
-                  />
-                </div>
-                <!-- Временная замена логотипа -->
-                <div class="text-xl font-bold text-gray-400 opacity-60">
-                  {{ client.name }}
-                </div>
+            <div class="px-4 py-2 flex items-center justify-between flex-col h-full">
+              <img :src="client.logo" :alt="client.name" class="h-14 max-w-24" />
+              <!-- Временная замена логотипа -->
+              <div class="text-base font-bold text-gray-400 opacity-60">
+                {{ client.name }}
               </div>
             </div>
           </div>
@@ -38,14 +29,22 @@
 <script setup>
 // Список компаний-клиентов
 const clients = [
-  { name: 'Компания 1', logo: '/logos/logo1.svg' },
-  { name: 'Компания 2', logo: '/logos/logo2.svg' },
-  { name: 'Компания 3', logo: '/logos/logo3.svg' },
-  { name: 'Компания 4', logo: '/logos/logo4.svg' },
-  { name: 'Компания 5', logo: '/logos/logo5.svg' },
-  { name: 'Компания 6', logo: '/logos/logo6.svg' },
-  { name: 'Компания 7', logo: '/logos/logo7.svg' },
-  { name: 'Компания 8', logo: '/logos/logo8.svg' },
+  { name: 'Nike', logo: '/src/assets/images/cases/nike.svg' },
+  {
+    name: 'GC Riviera — Гатчина',
+    logo: '/src/assets/images/cases/gcriviera.png',
+  },
+  // { name: 'PrefabHome.eu', logo: '/src/assets/images/cases/pfh_logo.png' },
+  { name: 'Сбербанк', logo: '/src/assets/images/cases/sberbank.svg' },
+  { name: 'Evermod.eu', logo: '/src/assets/images/cases/evermod.svg' },
+  { name: 'Holtsov House', logo: '/src/assets/images/cases/holtsov.svg' },
+  // { name: '«Москва Столица Здоровья»', logo: '@/assets/images/cases/msz.png' },
+  {
+    name: '«Москва Столица Здоровья»',
+    logo: '/src/assets/images/cases/msz.png',
+  },
+  { name: 'Knauf', logo: '/src/assets/images/cases/knauf.svg' },
+  { name: 'Makita', logo: '/src/assets/images/cases/makita.png' },
 ];
 </script>
 
@@ -64,6 +63,8 @@ const clients = [
 .logo-item {
   flex: 0 0 auto;
   width: 25%;
+  height: 100%;
+  height: 110px;
 }
 
 @media (max-width: 1024px) {
