@@ -12,10 +12,18 @@
             :key="index"
             class="logo-item"
           >
-            <div class="px-4 py-2 flex items-center justify-between flex-col h-full">
-              <img :src="client.logo" :alt="client.name" class="h-14 max-w-24" />
+            <div
+              class="px-4 py-2 flex items-center justify-between flex-col h-full"
+            >
+              <img
+                :src="client.logo"
+                :alt="client.name"
+                class="h-14 max-w-24"
+              />
               <!-- Временная замена логотипа -->
-              <div class="text-base font-bold text-gray-400 opacity-60">
+              <div
+                class="text-xs sm:text-base font-bold text-gray-400 opacity-60"
+              >
                 {{ client.name }}
               </div>
             </div>
