@@ -55,7 +55,7 @@
         </p>
 
         <!-- Кнопки призыва к действию -->
-        <div class="flex flex-col sm:flex-row gap-4">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <router-link
             to="/contacts"
             class="btn bg-white text-primary-700 hover:bg-gray-100 font-bold"

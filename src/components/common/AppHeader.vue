@@ -1,12 +1,12 @@
 <template>
   <header class="bg-white shadow-sm sticky top-0 z-50">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-4">
+      <div class="flex justify-between items-center py-4 gap-2.5">
         <!-- Логотип -->
         <AppLogo />
 
         <!-- Навигация для десктопа -->
-        <nav class="hidden md:flex space-x-8">
+        <nav class="hidden md:flex space-x-3 lg:space-x-8 text-nowrap">
           <router-link
             v-for="item in navItems"
             :key="item.path"
@@ -14,7 +14,7 @@
             @click.native.prevent="
               item.isDisable ? null : $router.push(item.path)
             "
-            class="text-gray-700 hover:text-primary-600 font-medium"
+            class="text-gray-700 hover:text-primary-600 font-medium text-sm"
             :class="[
               item.isDisable
                 ? 'text-gray-400 cursor-not-allowed'
@@ -67,7 +67,7 @@
 
         <!-- Кнопка действия -->
         <div class="hidden md:block">
-          <router-link to="/contacts" class="btn btn-primary hover:text-white">
+          <router-link to="/contacts" class="btn btn-primary hover:text-white p-2 lg:p-4 text-sm lg:text-base">
             Оставить заявку
           </router-link>
         </div>

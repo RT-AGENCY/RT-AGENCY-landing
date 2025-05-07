@@ -15,8 +15,7 @@ export function useContactForm(service = '') {
     email: '',
     message: '',
     service: service,
-    privacy: false,
-    honeypot: '' // Поле-ловушка для ботов
+    privacy: false
   })
 
   // Состояние ошибок
@@ -30,7 +29,6 @@ export function useContactForm(service = '') {
   // Состояние отправки
   const isSubmitting = ref(false)
   const formSubmitted = ref(false)
-  const submitError = ref(false)
 
   /**
    * Валидация формы
@@ -77,24 +75,16 @@ export function useContactForm(service = '') {
 
   /**
    * Отправка формы
-   * @returns {Promise<Object>} - Результат отправки
    */
   const submitForm = async () => {
-    if (!validateForm()) return { success: false }
-
-    // Проверка на бота (если поле honeypot заполнено, это бот)
-    if (form.honeypot) {
-      console.log('Bot detected')
-      // Имитируем успешную отправку для бота
-      return { success: true }
-    }
+    if (!validateForm()) return
 
     try {
       isSubmitting.value = true
-      submitError.value = false
 
-      // URL скрипта Google Apps Script
-      const googleScriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL || 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec'
+      // Здесь будет отправка данных на сервер или в Google Sheets
+      // Пример с использованием Google Apps Script для отправки в таблицу
+      const googleScriptUrl = 'YOUR_GOOGLE_SCRIPT_URL_HERE' // Заменить на реальный URL
 
       // Формируем данные для отправки
       const formData = {
@@ -104,27 +94,22 @@ export function useContactForm(service = '') {
         email: form.email,
         message: form.message || 'Не указано',
         service: form.service || 'Общая заявка',
-        source: typeof window !== 'undefined' ? window.location.href : '',
-        date: new Date().toISOString(),
-        utmParams: getUtmParams()
+        date: new Date().toISOString()
       }
 
-      // Отправка данных в Google Sheets
-      const response = await axios.post(googleScriptUrl, formData, {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
+      // Имитация отправки (заменить на реальный запрос)
+      console.log('Sending form data:', formData)
 
-      // Отслеживание конверсии
-      trackFormSubmission(form.service)
+      // В реальном проекте здесь будет запрос к API или Google Scripts
+      // await axios.post(googleScriptUrl, formData)
+
+      // Также можно добавить отправку на email через сервисы типа EmailJS
+      // или собственный бэкенд
 
       // Сбрасываем форму после успешной отправки
       Object.keys(form).forEach(key => {
         if (key === 'privacy') {
           form[key] = false
-        } else if (key === 'honeypot') {
-          form[key] = ''
         } else {
           form[key] = key === 'service' ? service : ''
         }
@@ -138,56 +123,11 @@ export function useContactForm(service = '') {
         formSubmitted.value = false
       }, 5000)
 
-      return { success: true, data: response.data }
     } catch (error) {
       console.error('Error submitting form:', error)
-      submitError.value = true
-      return { success: false, error }
+      alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз или свяжитесь с нами по телефону.')
     } finally {
       isSubmitting.value = false
-    }
-  }
-
-  /**
-   * Получение UTM-меток из URL
-   * @returns {Object} - UTM-метки
-   */
-  const getUtmParams = () => {
-    if (typeof window === 'undefined') return {}
-
-    const urlParams = new URLSearchParams(window.location.search)
-    const utmParams = {}
-
-    // Получаем все UTM-метки
-    const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content']
-    utmKeys.forEach(key => {
-      const value = urlParams.get(key)
-      if (value) utmParams[key] = value
-    })
-
-    return utmParams
-  }
-
-  /**
-   * Отправка события конверсии в системы аналитики
-   * @param {String} formType - Тип формы или услуга
-   */
-  const trackFormSubmission = (formType) => {
-    if (typeof window === 'undefined') return
-
-    // Отправка события в Google Analytics 4
-    if (window.gtag) {
-      window.gtag('event', 'form_submission', {
-        'form_type': formType || 'Контактная форма'
-      })
-    }
-
-    // Отправка события в Яндекс.Метрику
-    if (window.ym) {
-      const metrikaCounterId = import.meta.env.VITE_METRIKA_ID
-      if (metrikaCounterId) {
-        window.ym(metrikaCounterId, 'reachGoal', 'form_submission')
-      }
     }
   }
 
@@ -196,7 +136,6 @@ export function useContactForm(service = '') {
     errors,
     isSubmitting,
     formSubmitted,
-    submitError,
     submitForm
   }
 }

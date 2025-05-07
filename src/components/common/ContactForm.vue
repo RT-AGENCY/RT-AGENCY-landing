@@ -3,9 +3,21 @@
     <h3 class="text-2xl font-bold mb-4">{{ title }}</h3>
     <p class="text-gray-600 mb-6">{{ description }}</p>
 
-    <form @submit.prevent="submitForm" class="space-y-4">
+    <form @submit.prevent="submitFormWithTracking" class="space-y-4">
+      <!-- Поле-ловушка для ботов (скрытое) -->
+      <div style="display: none">
+        <input
+          type="text"
+          name="honeypot"
+          v-model="form.honeypot"
+          autocomplete="off"
+        />
+      </div>
+
       <div class="form-group">
-        <label for="name" class="form-label">Имя</label>
+        <label for="name" class="form-label"
+          >Имя <span class="text-red-500">*</span></label
+        >
         <input
           type="text"
           id="name"
@@ -29,7 +41,9 @@
       </div>
 
       <div class="form-group">
-        <label for="phone" class="form-label">Телефон</label>
+        <label for="phone" class="form-label"
+          >Телефон <span class="text-red-500">*</span></label
+        >
         <input
           type="tel"
           id="phone"
@@ -42,7 +56,9 @@
       </div>
 
       <div class="form-group">
-        <label for="email" class="form-label">Email</label>
+        <label for="email" class="form-label"
+          >Email <span class="text-red-500">*</span></label
+        >
         <input
           type="email"
           id="email"
@@ -79,8 +95,10 @@
           <div class="ml-3 text-sm">
             <label for="privacy" class="text-gray-600">
               Я согласен на обработку персональных данных согласно
-              <a href="/privacy" class="text-primary-600 hover:underline"
-                >политике конфиденциальности</a
+              <router-link
+                to="/privacy"
+                class="text-primary-600 hover:underline"
+                >политике конфиденциальности</router-link
               >
             </label>
             <span v-if="errors.privacy" class="form-error block">{{
@@ -124,17 +142,56 @@
       </div>
     </form>
 
+    <!-- Сообщение об успешной отправке -->
     <div
       v-if="formSubmitted"
       class="success-message mt-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-center"
     >
-      Спасибо за обращение! Мы свяжемся с вами в ближайшее время.
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 mx-auto mb-2 text-green-500"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 13l4 4L19 7"
+        />
+      </svg>
+      <p class="font-medium">Спасибо за обращение!</p>
+      <p>Мы свяжемся с вами в ближайшее время.</p>
+    </div>
+
+    <!-- Сообщение об ошибке -->
+    <div
+      v-if="submitError"
+      class="error-message mt-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-center"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 mx-auto mb-2 text-red-500"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+        />
+      </svg>
+      <p class="font-medium">Произошла ошибка при отправке формы</p>
+      <p>Пожалуйста, попробуйте еще раз или свяжитесь с нами по телефону.</p>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue';
+import { ref } from 'vue';
 import { useContactForm } from '@/composables/useContactForm';
 
 // Входные параметры компонента
@@ -159,21 +216,45 @@ const props = defineProps({
 });
 
 // Используем композабл для логики формы
-const { form, errors, isSubmitting, formSubmitted, submitForm } =
+const { form, errors, isSubmitting, formSubmitted, submitError, submitForm } =
   useContactForm(props.service);
+
+// Обертка для отправки формы с отслеживанием конверсии
+const submitFormWithTracking = async () => {
+  const result = await submitForm();
+
+  // Если нужна дополнительная логика после отправки
+  if (result && result.success) {
+    // Здесь можно добавить дополнительные действия после успешной отправки
+  }
+
+  return result;
+};
 </script>
 
 <style scoped>
-.success-message {
+.success-message,
+.error-message {
   animation: fadeIn 0.3s ease-in-out;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.form-input {
+  transition: all 0.2s ease-in-out;
+}
+
+.form-input:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 </style>

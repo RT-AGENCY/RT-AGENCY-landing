@@ -101,7 +101,7 @@
                   clip-rule="evenodd"
                 />
               </svg>
-              <span>Адрес вашей компании, город</span>
+              <span>г. Москва</span>
             </li>
             <li class="flex items-start">
               <svg
@@ -130,7 +130,7 @@
                   d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
                 />
               </svg>
-              <span>info@performance-agency.ru</span>
+              <span class="text-nowrap">info@performance-agency.ru</span>
             </li>
           </ul>
         </div>
