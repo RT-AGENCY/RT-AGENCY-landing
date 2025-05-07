@@ -103,7 +103,7 @@
               </svg>
               <span>г. Москва</span>
             </li>
-            <li class="flex items-start">
+            <!-- <li class="flex items-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5 mr-2 text-primary-500 flex-shrink-0"
@@ -115,8 +115,8 @@
                 />
               </svg>
               <span>+7 (000) 000-00-00</span>
-            </li>
-            <li class="flex items-start">
+            </li> -->
+            <!-- <li class="flex items-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5 mr-2 text-primary-500 flex-shrink-0"
@@ -131,7 +131,7 @@
                 />
               </svg>
               <span class="text-nowrap">info@performance-agency.ru</span>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
