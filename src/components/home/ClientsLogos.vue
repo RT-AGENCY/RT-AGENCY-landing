@@ -45,7 +45,7 @@ const clients = [
   // { name: 'PrefabHome.eu', logo: '/src/assets/images/cases/pfh_logo.png' },
   { name: 'Сбербанк', logo: 'src/assets/images/cases/sberbank.svg' },
   { name: 'Evermod.eu', logo: 'src/assets/images/cases/evermod.svg' },
-  { name: 'Holtsov House', logo: 'src/assets/images/cases/holtsov.svg' },
+  { name: 'Holtsov House', logo: './assets/images/cases/holtsov.svg' },
   // { name: '«Москва Столица Здоровья»', logo: '@/assets/images/cases/msz.png' },
   {
     name: '«Москва Столица Здоровья»',
