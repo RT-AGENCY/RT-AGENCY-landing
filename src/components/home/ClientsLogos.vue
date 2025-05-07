@@ -37,22 +37,22 @@
 <script setup>
 // Список компаний-клиентов
 const clients = [
-  { name: 'Nike', logo: '/src/assets/images/cases/nike.svg' },
+  { name: 'Nike', logo: '/assets/images/cases/nike.svg' },
   {
     name: 'GC Riviera — Гатчина',
-    logo: '/src/assets/images/cases/gcriviera.png',
+    logo: '/assets/images/cases/gcriviera.png',
   },
   // { name: 'PrefabHome.eu', logo: '/src/assets/images/cases/pfh_logo.png' },
-  { name: 'Сбербанк', logo: '/src/assets/images/cases/sberbank.svg' },
-  { name: 'Evermod.eu', logo: '/src/assets/images/cases/evermod.svg' },
-  { name: 'Holtsov House', logo: '/src/assets/images/cases/holtsov.svg' },
+  { name: 'Сбербанк', logo: 'src/assets/images/cases/sberbank.svg' },
+  { name: 'Evermod.eu', logo: 'src/assets/images/cases/evermod.svg' },
+  { name: 'Holtsov House', logo: 'src/assets/images/cases/holtsov.svg' },
   // { name: '«Москва Столица Здоровья»', logo: '@/assets/images/cases/msz.png' },
   {
     name: '«Москва Столица Здоровья»',
-    logo: '/src/assets/images/cases/msz.png',
+    logo: '/assets/images/cases/msz.png',
   },
-  { name: 'Knauf', logo: '/src/assets/images/cases/knauf.svg' },
-  { name: 'Makita', logo: '/src/assets/images/cases/makita.png' },
+  { name: 'Knauf', logo: 'src/assets/images/cases/knauf.svg' },
+  { name: 'Makita', logo: 'src/assets/images/cases/makita.png' },
 ];
 </script>
 
