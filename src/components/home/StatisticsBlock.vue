@@ -53,7 +53,7 @@ import { useIntersectionObserver } from '@vueuse/core';
 
 // Реальные конечные значения
 const targetValues = {
-  years: 8,
+  years: 20,
   clients: 150,
   roi: 320,
   cases: 200,

@@ -10,9 +10,17 @@
           <router-link
             v-for="item in navItems"
             :key="item.path"
-            :to="item.path"
+            :to="item.isDisable ? '' : item.path"
+            @click.native.prevent="
+              item.isDisable ? null : $router.push(item.path)
+            "
             class="text-gray-700 hover:text-primary-600 font-medium"
-            :class="{ 'text-primary-600': isActiveRoute(item.path) }"
+            :class="[
+              item.isDisable
+                ? 'text-gray-400 cursor-not-allowed'
+                : 'hover:text-primary-600',
+              { 'text-primary-600': isActiveRoute(item.path) },
+            ]"
           >
             {{ item.name }}
           </router-link>
@@ -59,9 +67,9 @@
 
         <!-- Кнопка действия -->
         <div class="hidden md:block">
-            <router-link to="/contacts" class="btn btn-primary hover:text-white">
+          <router-link to="/contacts" class="btn btn-primary hover:text-white">
             Оставить заявку
-            </router-link>
+          </router-link>
         </div>
       </div>
 
@@ -70,7 +78,7 @@
         <router-link
           v-for="item in navItems"
           :key="item.path"
-          :to="item.path"
+          :to="item.isDisable ? '' : item.path"
           class="block text-gray-700 hover:text-primary-600 font-medium py-2"
           :class="{ 'text-primary-600': isActiveRoute(item.path) }"
           @click="isMenuOpen = false"
@@ -101,12 +109,12 @@ const isMenuOpen = ref(false);
 // Определение пунктов меню
 const navItems = [
   { name: 'Главная', path: '/' },
-  { name: 'Услуги', path: '/services' },
-  { name: 'Кейсы', path: '/cases' },
-  { name: 'Блог', path: '/blog' },
-  { name: 'О компании', path: '/about' },
-  { name: 'Контакты', path: '/contacts' },
-  { name: 'Тарифы', path: '/pricing' },
+  { name: 'Услуги', path: '/services', isDisable: true },
+  { name: 'Кейсы', path: '/cases', isDisable: true },
+  { name: 'Блог', path: '/blog', isDisable: true },
+  { name: 'О компании', path: '/about', isDisable: true },
+  { name: 'Контакты', path: '/contacts', isDisable: true },
+  { name: 'Тарифы', path: '/pricing', isDisable: true },
 ];
 
 // Проверка активного маршрута

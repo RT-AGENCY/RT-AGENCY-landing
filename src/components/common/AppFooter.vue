@@ -5,11 +5,11 @@
         <!-- Информация о компании -->
         <div class="col-span-1">
           <AppLogo :isFooter="true" />
-          <p class="mt-4 text-gray-400">
-            Performance-маркетинговое агентство, специализирующееся на
+          <p class="mt-4 text-gray-400 text-left">
+            RT-AGENCY - агентство, специализирующееся на
             достижении конкретных бизнес-результатов для клиентов.
           </p>
-          <div class="mt-6 flex space-x-4">
+          <!-- <div class="mt-6 flex space-x-4">
             <a href="#" class="text-gray-400 hover:text-white">
               <span class="sr-only">Facebook</span>
               <svg
@@ -51,14 +51,14 @@
                 />
               </svg>
             </a>
-          </div>
+          </div> -->
         </div>
 
         <!-- Навигация -->
         <div class="col-span-1">
-          <h3 class="text-lg font-bold mb-4">Навигация</h3>
+          <h3 class="text-lg font-bold mb-4 text-left">Навигация</h3>
           <ul class="space-y-2">
-            <li v-for="item in navItems" :key="item.path">
+            <li v-for="item in navItems" :key="item.path" class="text-left">
               <router-link
                 :to="item.path"
                 class="text-gray-400 hover:text-white"
@@ -71,9 +71,9 @@
 
         <!-- Услуги -->
         <div class="col-span-1">
-          <h3 class="text-lg font-bold mb-4">Услуги</h3>
+          <h3 class="text-lg font-bold mb-4 text-left">Услуги</h3>
           <ul class="space-y-2">
-            <li v-for="service in services" :key="service.slug">
+            <li v-for="service in services" :key="service.slug" class="text-left">
               <router-link
                 :to="`/services/${service.slug}`"
                 class="text-gray-400 hover:text-white"
@@ -86,9 +86,9 @@
 
         <!-- Контакты -->
         <div class="col-span-1">
-          <h3 class="text-lg font-bold mb-4">Контакты</h3>
+          <h3 class="text-lg font-bold mb-4 text-left">Контакты</h3>
           <ul class="space-y-3 text-gray-400">
-            <li class="flex items-start">
+            <li class="flex items-start text-left">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5 mr-2 text-primary-500 flex-shrink-0"

@@ -80,7 +80,7 @@
 
 <style scoped>
 .hero-section {
-  min-height: calc(100vh - 80px);
+  height: auto;
   display: flex;
   align-items: center;
 }
