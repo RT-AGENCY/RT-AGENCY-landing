@@ -44,7 +44,7 @@
             >
               <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
                 <div
-                  class="flex flex-col md:flex-row items-start md:items-center gap-4 mb-4"
+                  class="flex flex-row items-start md:items-center gap-4 mb-4"
                 >
                   <div class="flex-shrink-0">
                     <!-- Аватар клиента (заглушка) -->
@@ -55,8 +55,8 @@
                     </div>
                   </div>
                   <div>
-                    <h3 class="text-xl font-bold">{{ testimonial.name }}</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-xl font-bold text-left">{{ testimonial.name }}</h3>
+                    <p class="text-gray-600 text-left">
                       {{ testimonial.position }}, {{ testimonial.company }}
                     </p>
                   </div>

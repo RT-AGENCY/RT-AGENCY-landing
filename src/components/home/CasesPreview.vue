@@ -73,7 +73,7 @@
                     clip-rule="evenodd"
                   />
                 </svg>
-                <span>{{ result }}</span>
+                <span class="text-sm lg:text-base">{{ result }}</span>
               </div>
             </div>
 
