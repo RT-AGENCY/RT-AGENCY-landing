@@ -21,7 +21,7 @@
             бизнес и предложим стратегию роста.
           </p>
           <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <router-link to="/contacts" class="btn btn-primary">
+            <router-link to="/contacts" class="btn btn-primary hover:text-white">
               Получить консультацию
             </router-link>
             <a href="tel:+79991234567" class="btn btn-outline">
@@ -68,7 +68,7 @@ useMeta({
   schema: {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Performance Agency',
+    name: 'RT-AGENCY',
     description:
       'Performance-маркетинговое агентство, специализирующееся на контекстной и таргетированной рекламе, SEO и оптимизации конверсий.',
     url: 'https://performance-agency.ru',

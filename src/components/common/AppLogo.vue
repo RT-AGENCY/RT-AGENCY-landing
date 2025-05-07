@@ -2,7 +2,7 @@
   <router-link to="/" class="flex items-center">
     <img
       src="@/assets/images/logo.svg"
-      alt="Performance Agency Logo"
+      alt="RT-AGENCY Logo"
       class="h-10 w-auto"
       v-if="false"
     />
@@ -13,8 +13,8 @@
         isFooter ? 'text-white' : 'text-gray-900',
       ]"
     >
-      <span class="text-primary-600">Performance</span>
-      Agency
+      <span class="text-primary-600">RT</span>-
+      AGENCY
     </div>
   </router-link>
 </template>

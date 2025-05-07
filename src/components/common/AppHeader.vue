@@ -59,9 +59,9 @@
 
         <!-- Кнопка действия -->
         <div class="hidden md:block">
-          <router-link to="/contacts" class="btn btn-primary">
+            <router-link to="/contacts" class="btn btn-primary hover:text-white">
             Оставить заявку
-          </router-link>
+            </router-link>
         </div>
       </div>
 

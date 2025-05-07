@@ -102,7 +102,7 @@
 
       <!-- Кнопка "Все кейсы" -->
       <div class="text-center mt-12">
-        <router-link to="/cases" class="btn btn-primary">
+        <router-link to="/cases" class="btn btn-primary hover:text-white">
           Все кейсы
         </router-link>
       </div>

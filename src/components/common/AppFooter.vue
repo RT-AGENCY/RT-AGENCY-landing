@@ -139,7 +139,7 @@
       <div class="mt-12 pt-8 border-t border-gray-800">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <p class="text-sm text-gray-400">
-            © {{ new Date().getFullYear() }} Performance Agency. Все права
+            © {{ new Date().getFullYear() }} RT-AGENCY. Все права
             защищены.
           </p>
           <div class="flex space-x-6 mt-4 md:mt-0">

@@ -7,7 +7,7 @@ import { computed, inject } from 'vue'
  * @returns {Object} - Инструменты для работы с метаданными
  */
 export function useMeta(options = {}) {
-  const siteName = inject('siteName', 'Performance Agency')
+  const siteName = inject('siteName', 'RT-AGENCY')
   const siteDescription = inject('siteDescription', 'Маркетинговое агентство, специализирующееся на performance-маркетинге')
 
   const title = computed(() => options.title ? `${options.title} | ${siteName}` : siteName)

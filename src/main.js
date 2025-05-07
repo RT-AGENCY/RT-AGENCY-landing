@@ -32,7 +32,7 @@ app.use(router)
 app.use(head)
 
 // Глобальные настройки для мета-тегов
-app.provide('siteName', 'Performance Agency')
+app.provide('siteName', 'RT-AGENCY')
 app.provide('siteDescription', 'Маркетинговое агентство, специализирующееся на performance-маркетинге')
 
 // Монтируем приложение

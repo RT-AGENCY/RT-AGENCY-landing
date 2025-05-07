@@ -58,7 +58,7 @@
 
       <!-- Кнопка "Все услуги" -->
       <div class="text-center mt-12">
-        <router-link to="/services" class="btn btn-primary">
+        <router-link to="/services" class="btn btn-primary hover:text-white">
           Все услуги
         </router-link>
       </div>

@@ -17,7 +17,7 @@ const routes = [
     name: 'home',
     component: HomePage,
     meta: {
-      title: 'Главная | Performance Agency',
+      title: 'Главная | RT-AGENCY',
       description: 'Маркетинговое агентство, специализирующееся на performance-маркетинге',
     }
   },
@@ -26,7 +26,7 @@ const routes = [
     name: 'services',
     component: ServicesPage,
     meta: {
-      title: 'Услуги | Performance Agency',
+      title: 'Услуги | RT-AGENCY',
       description: 'Полный спектр услуг по digital-маркетингу: контекстная и таргетированная реклама, SEO, CRO',
     }
   },
@@ -35,7 +35,7 @@ const routes = [
     name: 'service-detail',
     component: ServiceDetailPage,
     meta: {
-      title: 'Услуга | Performance Agency',
+      title: 'Услуга | RT-AGENCY',
       description: 'Подробное описание услуги с кейсами и результатами'
     }
   },
@@ -44,7 +44,7 @@ const routes = [
     name: 'cases',
     component: CasesPage,
     meta: {
-      title: 'Кейсы | Performance Agency',
+      title: 'Кейсы | RT-AGENCY',
       description: 'Наши успешные кейсы и результаты работы с клиентами',
     }
   },
@@ -53,7 +53,7 @@ const routes = [
     name: 'case-detail',
     component: CaseDetailPage,
     meta: {
-      title: 'Кейс | Performance Agency',
+      title: 'Кейс | RT-AGENCY',
       description: 'Детальный разбор кейса с результатами и использованными инструментами'
     }
   },
@@ -62,7 +62,7 @@ const routes = [
     name: 'blog',
     component: BlogPage,
     meta: {
-      title: 'Блог | Performance Agency',
+      title: 'Блог | RT-AGENCY',
       description: 'Статьи, гайды и новости по маркетингу и рекламе',
       layout: 'blog'
     }
@@ -72,7 +72,7 @@ const routes = [
     name: 'blog-post',
     component: BlogPostPage,
     meta: {
-      title: 'Статья | Performance Agency',
+      title: 'Статья | RT-AGENCY',
       description: 'Полезные материалы по маркетингу и рекламе',
       layout: 'blog'
     }
@@ -82,7 +82,7 @@ const routes = [
     name: 'about',
     component: AboutPage,
     meta: {
-      title: 'О компании | Performance Agency',
+      title: 'О компании | RT-AGENCY',
       description: 'История, команда и ценности нашего агентства',
     }
   },
@@ -91,7 +91,7 @@ const routes = [
     name: 'contacts',
     component: ContactsPage,
     meta: {
-      title: 'Контакты | Performance Agency',
+      title: 'Контакты | RT-AGENCY',
       description: 'Свяжитесь с нами для консультации по вопросам рекламы',
     }
   },
@@ -100,7 +100,7 @@ const routes = [
     name: 'pricing',
     component: PricingPage,
     meta: {
-      title: 'Тарифы | Performance Agency',
+      title: 'Тарифы | RT-AGENCY',
       description: 'Стоимость услуг и условия сотрудничества',
     }
   },
@@ -109,7 +109,7 @@ const routes = [
     name: 'search',
     component: SearchPage,
     meta: {
-      title: 'Поиск | Performance Agency',
+      title: 'Поиск | RT-AGENCY',
       description: 'Поиск по сайту',
     }
   },

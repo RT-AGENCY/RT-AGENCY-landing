@@ -64,7 +64,7 @@
           </router-link>
           <router-link
             to="/cases"
-            class="btn btn-outline border-white text-white hover:bg-white/10"
+            class="btn btn-outline border-white text-white hover:text-white hover:bg-white/10"
           >
             Посмотреть кейсы
           </router-link>
