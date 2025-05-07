@@ -9,7 +9,7 @@
     <!-- Заглушка, пока нет svg логотипа -->
     <div
       :class="[
-        'font-bold text-xl tracking-tight',
+        'font-bold lg:text-xl tracking-tight',
         isFooter ? 'text-white' : 'text-gray-900',
       ]"
     >
