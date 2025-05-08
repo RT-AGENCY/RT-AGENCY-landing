@@ -4,32 +4,22 @@
       <div class="text-center mb-10">
         <h2 class="text-2xl font-bold text-gray-800">Нам доверяют</h2>
       </div>
-
-      <div class="logo-slider">
-        <div class="logo-track">
-          <div
-            v-for="(client, index) in clients"
-            :key="index"
-            class="logo-item"
-          >
-            <div
-              class="px-4 py-2 flex items-center justify-between flex-col h-full"
-            >
-              <img
-                :src="client.logo"
-                :alt="client.name"
-                class="h-14 max-w-24"
-              />
-              <!-- Временная замена логотипа -->
-              <!-- <div
-                class="text-xs sm:text-base font-bold text-gray-400 opacity-60"
-              >
-                {{ client.name }}
-              </div> -->
-            </div>
+      <Vue3Marquee
+        :css="true"
+        :duration="30"
+        :direction="'normal'"
+        :gradient="true"
+        :gradientColor="[255, 255, 255]"
+        :gradientLength="15"
+        class="my-marquee"
+      >
+        <div v-for="(client, index) in clients" :key="index" class="mx-8">
+          <div>
+            <img :src="client.logo" :alt="client.alt" class="h-14 max-w-24" />
           </div>
         </div>
-      </div>
+      </Vue3Marquee>
+
     </div>
   </section>
 </template>

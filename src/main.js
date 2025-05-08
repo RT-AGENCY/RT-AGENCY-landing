@@ -5,6 +5,8 @@ import { createHead } from '@vueuse/head'
 import App from './App.vue'
 import routes from './router'
 import './style.css'
+import Vue3Marquee from 'vue3-marquee'
+
 
 // Импорт основных стилей
 import './assets/styles/main.css'
@@ -30,6 +32,7 @@ const head = createHead()
 app.use(pinia)
 app.use(router)
 app.use(head)
+app.use(Vue3Marquee)
 
 // Глобальные настройки для мета-тегов
 app.provide('siteName', 'RT-AGENCY')
