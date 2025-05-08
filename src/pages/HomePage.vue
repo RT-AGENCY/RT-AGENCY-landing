@@ -5,7 +5,7 @@
     <StatisticsBlock />
     <CasesPreview />
     <TestimonialsSlider />
-    <!-- <ClientsLogos /> -->
+    <ClientsLogos />
 
     <!-- Секция с призывом к действию -->
     <section class="py-16 bg-primary-50">

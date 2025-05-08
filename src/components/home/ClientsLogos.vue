@@ -21,11 +21,11 @@
                 class="h-14 max-w-24"
               />
               <!-- Временная замена логотипа -->
-              <div
+              <!-- <div
                 class="text-xs sm:text-base font-bold text-gray-400 opacity-60"
               >
                 {{ client.name }}
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -35,24 +35,57 @@
 </template>
 
 <script setup>
-// Список компаний-клиентов
+import nikeLogoSvg from '@/assets/images/cases/nike.svg';
+import gcrivieraLogoPng from '@/assets/images/cases/gcriviera.png';
+import sberbankLogoSvg from '@/assets/images/cases/sberbank.svg';
+import evermodLogoSvg from '@/assets/images/cases/evermod.svg';
+import holtsovLogoSvg from '@/assets/images/cases/holtsov.svg';
+import mszLogoPng from '@/assets/images/cases/msz.png';
+import knaufLogoSvg from '@/assets/images/cases/knauf.svg';
+import makitaLogoPng from '@/assets/images/cases/makita.png';
+
 const clients = [
-  { name: 'Nike', logo: '/cases/nike.svg' },
+  {
+    name: 'Nike',
+    logo: nikeLogoSvg,
+    alt: 'Логотип компании Nike',
+  },
   {
     name: 'GC Riviera — Гатчина',
-    logo: '/cases/gcriviera.png',
+    logo: gcrivieraLogoPng,
+    alt: 'Логотип GC Riviera — Гатчина',
   },
-  // { name: 'PrefabHome.eu', logo: '/src/assets/images/cases/pfh_logo.png' },
-  { name: 'Сбербанк', logo: '/cases/sberbank.svg' },
-  { name: 'Evermod.eu', logo: '/cases/evermod.svg' },
-  { name: 'Holtsov House', logo: '/cases/holtsov.svg' },
-  // { name: '«Москва Столица Здоровья»', logo: '@/assets/images/cases/msz.png' },
+  // PrefabHome.eu удален в исходном коде
+  {
+    name: 'Сбербанк',
+    logo: sberbankLogoSvg,
+    alt: 'Логотип Сбербанка',
+  },
+  {
+    name: 'Evermod.eu',
+    logo: evermodLogoSvg,
+    alt: 'Логотип Evermod.eu',
+  },
+  {
+    name: 'Holtsov House',
+    logo: holtsovLogoSvg,
+    alt: 'Логотип Holtsov House',
+  },
   {
     name: '«Москва Столица Здоровья»',
-    logo: '/cases/msz.png',
+    logo: mszLogoPng,
+    alt: 'Логотип «Москва Столица Здоровья»',
   },
-  { name: 'Knauf', logo: '/cases/knauf.svg' },
-  { name: 'Makita', logo: '/cases/makita.png' },
+  {
+    name: 'Knauf',
+    logo: knaufLogoSvg,
+    alt: 'Логотип компании Knauf',
+  },
+  {
+    name: 'Makita',
+    logo: makitaLogoPng,
+    alt: 'Логотип компании Makita',
+  },
 ];
 </script>
 
@@ -72,7 +105,7 @@ const clients = [
   flex: 0 0 auto;
   width: 25%;
   height: 100%;
-  height: 110px;
+  height: 80px;
 }
 
 @media (max-width: 1024px) {

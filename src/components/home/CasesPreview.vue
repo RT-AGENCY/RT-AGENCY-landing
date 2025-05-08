@@ -13,14 +13,14 @@
         <div
           v-for="(caseItem, index) in cases"
           :key="index"
-          class="bg-white shadow-md rounded-lg overflow-hidden transition-transform hover:-translate-y-2 duration-300"
+          class="bg-white shadow-md rounded-lg overflow-hidden transition-transform hover:-translate-y-2 duration-300 flex flex-col"
         >
           <!-- Изображение кейса (заглушка) -->
           <div class="aspect-video bg-gray-100 relative">
             <div
               class="absolute inset-0 flex items-center justify-center text-gray-400"
             >
-              <img v-if="caseItem.img" :src="caseItem.img" alt="case image." />
+              <img v-if="caseItem.img" :src="caseItem.img" alt="case image." class="case-image"/>
               <svg
                 v-else
                 xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@
             </div>
           </div>
 
-          <div class="p-6 text-start">
+          <div class="p-6 text-start flex-1 flex flex-col">
             <!-- Категория кейса -->
             <div class="mb-2">
               <span
@@ -82,7 +82,7 @@
             <!-- Кнопка "Подробнее" -->
             <router-link
               :to="`/cases/${caseItem.slug}`"
-              class="inline-flex items-center text-primary-600 font-medium hover:text-primary-700"
+              class="inline-flex items-end text-primary-600 font-medium hover:text-primary-700 flex-1"
             >
               Подробнее
               <svg
@@ -114,6 +114,9 @@
 
 <script setup>
 // Примеры кейсов
+import nikeImg from '@/assets/images/cases/nike.jpg'
+
+
 const cases = [
   {
     title: 'Мультиканальная рекламная кампания для Nike',
@@ -121,7 +124,7 @@ const cases = [
       'Комплексное продвижение в ВКонтакте, Facebook, Instagram, Яндекс.Директ и Google Ads для увеличения регистраций на мероприятия',
     slug: 'nike-multichannel-campaign',
     category: 'Мультиканальный маркетинг',
-    // img: '@/assets/images/cases/nike.jpg',
+    img: nikeImg,
     results: [
       '+62% регистраций на брендовые мероприятия',
       'ROAS 4.1 (возврат на вложенные средства)',
@@ -174,3 +177,11 @@ const getTagClass = (category) => {
   return categories[category] || 'bg-gray-100 text-gray-800';
 };
 </script>
+
+<style scoped>
+.case-image {
+  max-height: 100%;
+  width: 100%;
+}
+
+</style>
