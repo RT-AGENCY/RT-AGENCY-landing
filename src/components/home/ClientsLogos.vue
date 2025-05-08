@@ -4,55 +4,78 @@
       <div class="text-center mb-10">
         <h2 class="text-2xl font-bold text-gray-800">Нам доверяют</h2>
       </div>
-
-      <div class="logo-slider">
-        <div class="logo-track">
-          <div
-            v-for="(client, index) in clients"
-            :key="index"
-            class="logo-item"
-          >
-            <div
-              class="px-4 py-2 flex items-center justify-between flex-col h-full"
-            >
-              <img
-                :src="client.logo"
-                :alt="client.name"
-                class="h-14 max-w-24"
-              />
-              <!-- Временная замена логотипа -->
-              <div
-                class="text-xs sm:text-base font-bold text-gray-400 opacity-60"
-              >
-                {{ client.name }}
-              </div>
-            </div>
+      <Vue3Marquee
+        :css="true"
+        :duration="30"
+        :direction="'normal'"
+        :gradient="true"
+        :gradientColor="[255, 255, 255]"
+        :gradientLength="15"
+        class="my-marquee"
+      >
+        <div v-for="(client, index) in clients" :key="index" class="mx-8">
+          <div>
+            <img :src="client.logo" :alt="client.alt" class="h-14 max-w-24" />
           </div>
         </div>
-      </div>
+      </Vue3Marquee>
+
     </div>
   </section>
 </template>
 
 <script setup>
-// Список компаний-клиентов
+import nikeLogoSvg from '@/assets/images/cases/nike.svg';
+import gcrivieraLogoPng from '@/assets/images/cases/gcriviera.png';
+import sberbankLogoSvg from '@/assets/images/cases/sberbank.svg';
+import evermodLogoSvg from '@/assets/images/cases/evermod.svg';
+import holtsovLogoSvg from '@/assets/images/cases/holtsov.svg';
+import mszLogoPng from '@/assets/images/cases/msz.png';
+import knaufLogoSvg from '@/assets/images/cases/knauf.svg';
+import makitaLogoPng from '@/assets/images/cases/makita.png';
+
 const clients = [
-  { name: 'Nike', logo: '/assets/images/cases/nike.svg' },
+  {
+    name: 'Nike',
+    logo: nikeLogoSvg,
+    alt: 'Логотип компании Nike',
+  },
   {
     name: 'GC Riviera — Гатчина',
-    logo: '/assets/images/cases/gcriviera.png',
+    logo: gcrivieraLogoPng,
+    alt: 'Логотип GC Riviera — Гатчина',
   },
-  // { name: 'PrefabHome.eu', logo: '/src/assets/images/cases/pfh_logo.png' },
-  { name: 'Сбербанк', logo: 'src/assets/images/cases/sberbank.svg' },
-  { name: 'Evermod.eu', logo: 'src/assets/images/cases/evermod.svg' },
-  { name: 'Holtsov House', logo: 'src/assets/images/cases/holtsov.svg' },
-  // { name: '«Москва Столица Здоровья»', logo: '@/assets/images/cases/msz.png' },
+  // PrefabHome.eu удален в исходном коде
+  {
+    name: 'Сбербанк',
+    logo: sberbankLogoSvg,
+    alt: 'Логотип Сбербанка',
+  },
+  {
+    name: 'Evermod.eu',
+    logo: evermodLogoSvg,
+    alt: 'Логотип Evermod.eu',
+  },
+  {
+    name: 'Holtsov House',
+    logo: holtsovLogoSvg,
+    alt: 'Логотип Holtsov House',
+  },
   {
     name: '«Москва Столица Здоровья»',
-    logo: '/assets/images/cases/msz.png',
+    logo: mszLogoPng,
+    alt: 'Логотип «Москва Столица Здоровья»',
   },
-  { name: 'Knauf', logo: 'src/assets/images/cases/knauf.svg' },
-  { name: 'Makita', logo: 'src/assets/images/cases/makita.png' },
+  {
+    name: 'Knauf',
+    logo: knaufLogoSvg,
+    alt: 'Логотип компании Knauf',
+  },
+  {
+    name: 'Makita',
+    logo: makitaLogoPng,
+    alt: 'Логотип компании Makita',
+  },
 ];
 </script>
 
@@ -72,7 +95,7 @@ const clients = [
   flex: 0 0 auto;
   width: 25%;
   height: 100%;
-  height: 110px;
+  height: 80px;
 }
 
 @media (max-width: 1024px) {
