@@ -14,7 +14,7 @@ export function useContactForm(service = '') {
     phone: '',
     email: '',
     message: '',
-    service: service,
+    service: service, // Начальное значение может быть передано из пропса
     privacy: false,
     honeypot: '' // Поле-ловушка для ботов
   })

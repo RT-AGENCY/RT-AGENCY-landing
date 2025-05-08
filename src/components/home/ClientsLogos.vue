@@ -10,7 +10,7 @@
         :direction="'normal'"
         :gradient="true"
         :gradientColor="[255, 255, 255]"
-        :gradientLength="15"
+        gradientLength="15"
         class="my-marquee"
       >
         <div v-for="(client, index) in clients" :key="index" class="mx-8">

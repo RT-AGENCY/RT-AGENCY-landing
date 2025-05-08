@@ -20,6 +20,9 @@ importers:
       pinia:
         specifier: ^3.0.2
         version: 3.0.2(vue@3.5.13)
+      swiper:
+        specifier: ^11.2.6
+        version: 11.2.6
       vee-validate:
         specifier: ^4.15.0
         version: 4.15.0(vue@3.5.13)
@@ -1353,6 +1356,10 @@ packages:
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  swiper@11.2.6:
+    resolution: {integrity: sha512-8aXpYKtjy3DjcbzZfz+/OX/GhcU5h+looA6PbAzHMZT6ESSycSp9nAjPCenczgJyslV+rUGse64LMGpWE3PX9Q==}
+    engines: {node: '>= 4.7.0'}
 
   tailwindcss-cli@0.1.2:
     resolution: {integrity: sha512-17NuGSHKTr4twN1BFxuoTArMcBQH+7YL6x4PHFnmWsGNOX45O4Roc8EdMVhSSH2rQoSDoLvR4TmlfddMon3yKg==}
@@ -2690,6 +2697,8 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
+
+  swiper@11.2.6: {}
 
   tailwindcss-cli@0.1.2:
     dependencies:

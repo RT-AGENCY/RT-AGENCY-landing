@@ -115,6 +115,8 @@
 <script setup>
 // Примеры кейсов
 import nikeImg from '@/assets/images/cases/nike.jpg'
+import evermodImg from '@/assets/images/cases/Evermod.webp'
+import mszImg from '@/assets/images/cases/msz.webp'
 
 
 const cases = [
@@ -139,6 +141,7 @@ const cases = [
       'Структурирование международных рекламных кампаний и адаптация под различные европейские рынки',
     slug: 'evermod-international-campaigns',
     category: 'Контекстная реклама',
+    img: evermodImg,
     results: [
       'Рост количества лидов с 5 до 25-40 в месяц',
       'Снижение стоимости привлечения клиента до €28-€40',
@@ -153,6 +156,7 @@ const cases = [
       'Комплексное продвижение городской инициативы в Яндекс.Директ и ВКонтакте для повышения узнаваемости программы здравоохранения',
     slug: 'moscow-health-capital-campaign',
     category: 'Мультиканальный маркетинг',
+    img: mszImg,
     results: [
       'Охват более 5 млн уникальных пользователей',
       'Рост брендовых запросов на 44%',
