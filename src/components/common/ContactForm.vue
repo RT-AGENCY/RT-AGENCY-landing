@@ -40,6 +40,21 @@
         />
       </div>
 
+      <!-- Выпадающий список с услугами -->
+      <div class="form-group" v-if="services && services.length">
+        <label for="service" class="form-label">Интересующая услуга</label>
+        <select id="service" v-model="form.service" class="form-input">
+          <option value="">Выберите услугу</option>
+          <option
+            v-for="service in services"
+            :key="service.id"
+            :value="service.id"
+          >
+            {{ service.name }}
+          </option>
+        </select>
+      </div>
+
       <div class="form-group">
         <label for="phone" class="form-label"
           >Телефон <span class="text-red-500">*</span></label
@@ -191,7 +206,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import { useContactForm } from '@/composables/useContactForm';
 
 // Входные параметры компонента
@@ -213,11 +228,26 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  services: {
+    type: Array,
+    default: () => [],
+  },
 });
 
 // Используем композабл для логики формы
 const { form, errors, isSubmitting, formSubmitted, submitError, submitForm } =
   useContactForm(props.service);
+
+// Если передан пропс service, устанавливаем его как начальное значение
+watch(
+  () => props.service,
+  (newService) => {
+    if (newService) {
+      form.service = newService;
+    }
+  },
+  { immediate: true }
+);
 
 // Обертка для отправки формы с отслеживанием конверсии
 const submitFormWithTracking = async () => {
@@ -251,6 +281,7 @@ const submitFormWithTracking = async () => {
 
 .form-input {
   transition: all 0.2s ease-in-out;
+  color: #fff;
 }
 
 .form-input:focus {
