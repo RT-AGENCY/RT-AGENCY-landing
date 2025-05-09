@@ -1,0 +1,54 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.json$
+Disallow: /*.xml$
+Allow: /sitemap.xml
+
+# Специфичные правила для Googlebot
+User-agent: Googlebot
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.svg$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.webp$
+
+# Специфичные правила для Yandex
+User-agent: Yandex
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.svg$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.webp$
+Disallow: /cgi-bin/
+Disallow: *?print=
+Disallow: *&print=
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
+
+# Правила для метрики и других счетчиков
+User-agent: GoogleBot-Image
+Allow: /*
+
+User-agent: YandexImages
+Allow: /*
+
+# Запрет для устаревших поисковых ботов
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Указание на sitemap
+Sitemap: https://rt-ads.ru/sitemap.xml
+
+# Хост для Яндекса (основное зеркало сайта)
+Host: rt-ads.ru

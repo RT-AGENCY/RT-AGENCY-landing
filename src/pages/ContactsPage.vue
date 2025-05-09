@@ -63,7 +63,7 @@
               </div>
 
               <!-- Телефон -->
-              <div class="flex items-start">
+              <!-- <div class="flex items-start">
                 <div class="flex-shrink-0 p-2 bg-primary-50 rounded-full mr-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -83,14 +83,14 @@
                 <div>
                   <h3 class="font-medium text-lg text-left">Телефон</h3>
                   <p class="text-gray-600">
-                    <!-- <a
+                    <a
                       href="tel:+79991234567"
                       class="hover:text-primary-600 transition-colors"
                       >+7 (999) 123-45-67</a
-                    > -->
+                    >
                   </p>
                 </div>
-              </div>
+              </div> -->
 
               <!-- Email -->
               <div class="flex items-start">
@@ -123,7 +123,7 @@
               </div>
 
               <!-- Социальные сети -->
-              <div class="flex items-start">
+              <!-- <div class="flex items-start">
                 <div class="flex-shrink-0 p-2 bg-primary-50 rounded-full mr-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +178,7 @@
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

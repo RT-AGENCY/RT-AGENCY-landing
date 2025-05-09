@@ -6,8 +6,8 @@
         <div class="col-span-1">
           <AppLogo :isFooter="true" />
           <p class="mt-4 text-gray-400 text-left">
-            RT-AGENCY - агентство, специализирующееся на
-            достижении конкретных бизнес-результатов для клиентов.
+            RT-AGENCY - агентство, специализирующееся на достижении конкретных
+            бизнес-результатов для клиентов.
           </p>
           <!-- <div class="mt-6 flex space-x-4">
             <a href="#" class="text-gray-400 hover:text-white">
@@ -73,7 +73,11 @@
         <div class="col-span-1">
           <h3 class="text-lg font-bold mb-4 text-left">Услуги</h3>
           <ul class="space-y-2">
-            <li v-for="service in services" :key="service.slug" class="text-left">
+            <li
+              v-for="service in services"
+              :key="service.slug"
+              class="text-left"
+            >
               <router-link
                 :to="`/services/${service.slug}`"
                 class="text-gray-400 hover:text-white"
@@ -116,7 +120,7 @@
               </svg>
               <span>+7 (000) 000-00-00</span>
             </li> -->
-            <!-- <li class="flex items-start">
+            <li class="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5 mr-2 text-primary-500 flex-shrink-0"
@@ -130,8 +134,8 @@
                   d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
                 />
               </svg>
-              <span class="text-nowrap">info@performance-agency.ru</span>
-            </li> -->
+              <a href="mailto:sasha.af.one@gmail.com" class="text-nowrap text-gray-400">sasha.af.one@gmail.com</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -139,8 +143,7 @@
       <div class="mt-12 pt-8 border-t border-gray-800">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <p class="text-sm text-gray-400">
-            © {{ new Date().getFullYear() }} RT-AGENCY. Все права
-            защищены.
+            © {{ new Date().getFullYear() }} RT-AGENCY. Все права защищены.
           </p>
           <div class="flex space-x-6 mt-4 md:mt-0">
             <router-link
