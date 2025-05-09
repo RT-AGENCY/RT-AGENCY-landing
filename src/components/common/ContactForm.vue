@@ -175,6 +175,7 @@ const preSelectedService = computed(() => props.service);
 .form-input {
   transition: all 0.2s ease-in-out;
   color: #fff; /* Исправлен цвет текста для лучшей видимости */
+  background: rgb(3, 105, 161);
 }
 
 .form-input:focus {
