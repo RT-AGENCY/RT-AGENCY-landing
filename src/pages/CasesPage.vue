@@ -193,7 +193,7 @@
           <div
             v-for="caseItem in filteredCases"
             :key="caseItem.id"
-            class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col"
           >
             <!-- Case Image -->
             <div class="aspect-video bg-gray-100 relative">
@@ -226,7 +226,7 @@
             </div>
 
             <!-- Case Content -->
-            <div class="p-6">
+            <div class="p-6 flex flex-col flex-1">
               <!-- Tags -->
               <div class="flex flex-wrap gap-2 mb-3">
                 <span
@@ -244,13 +244,13 @@
               </div>
 
               <!-- Title -->
-              <h3 class="text-xl font-bold mb-2">{{ caseItem.title }}</h3>
+              <h3 class="text-xl font-bold mb-2 text-start">{{ caseItem.title }}</h3>
 
               <!-- Company -->
               <p class="text-sm text-gray-600 mb-3">{{ caseItem.client }}</p>
 
               <!-- Description -->
-              <p class="text-gray-700 mb-4 line-clamp-3">
+              <p class="text-gray-700 mb-4 line-clamp-3 text-start">
                 {{ caseItem.description }}
               </p>
 
@@ -283,7 +283,7 @@
               <!-- CTA Button -->
               <router-link
                 :to="`/cases/${caseItem.slug}`"
-                class="inline-flex items-center text-primary-600 font-medium hover:text-primary-700"
+                class="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 mt-auto"
               >
                 Подробнее о кейсе
                 <svg
@@ -415,7 +415,7 @@ const allCases = ref([
     title: 'Мультиканальная рекламная кампания для Nike',
     client: 'Nike',
     description:
-      'Комплексное продвижение в ВКонтакте, Facebook, Instagram, Яндекс.Директ и Google Ads для увеличения регистраций на мероприятия',
+      'Комплексное продвижение в ВКонтакте, Facebook, Instagram, Яндекс.Директ и Google Ads для увеличения регистраций на брендовые мероприятия',
     services: ['context-ads', 'targeted-ads', 'complex'],
     industry: 'retail',
     image: '/images/cases/nike-case.jpg',
@@ -429,86 +429,181 @@ const allCases = ref([
     roi: 410,
     revenue: '+62%',
   },
+
+  // 2. GC Riviera - Коттеджные поселки
   {
     id: 2,
-    slug: 'evermod-international-campaigns',
-    title: 'Оптимизация рекламных кампаний для модульных домов Evermod',
-    client: 'Evermod',
+    slug: 'gc-riviera-cottages',
+    title: 'Увеличение продаж коттеджных поселков GC Riviera',
+    client: 'GC Riviera — Гатчина',
     description:
-      'Структурирование международных рекламных кампаний и адаптация под различные европейские рынки',
-    services: ['context-ads', 'digital-strategy'],
+      'Оптимизация контекстной рекламы для коттеджных поселков в Санкт-Петербурге и Ленинградской области',
+    services: ['context-ads', 'web-analytics', 'cro'],
     industry: 'real-estate',
-    image: '/images/cases/evermod-case.jpg',
+    image: '/images/cases/gc-riviera-case.jpg',
     keyResults: [
-      { metric: 'Лиды/месяц', value: '5 → 40' },
-      { metric: 'CPA', value: '€28-€40' },
-      { metric: 'Рынки', value: '6 стран' },
-      { metric: 'Конверсия', value: '+85%' },
+      { metric: 'CPL', value: '1200-1800₽' },
+      { metric: 'Конверсия', value: '2.5-3.2%' },
+      { metric: 'Целевой трафик', value: '85-90%' },
+      { metric: 'Сегменты', value: '40+' },
     ],
     date: '2025-04-15',
     roi: 290,
-    revenue: '+120%',
+    revenue: '+180%',
   },
+
+  // 3. Holtsov House - Модульные дома
   {
     id: 3,
-    slug: 'moscow-health-capital-campaign',
+    slug: 'holtsov-house-modular',
+    title: 'Продвижение модульных домов Holtsov House',
+    client: 'Holtsov House',
+    description:
+      'Реструктуризация контекстной рекламы с полной сменой стратегии и проведением A/B тестов',
+    services: ['context-ads', 'cro'],
+    industry: 'real-estate',
+    image: '/images/cases/holtsov-case.jpg',
+    keyResults: [
+      { metric: 'CTR', value: '3.6%' },
+      { metric: 'CPL', value: '1000-1300₽' },
+      { metric: 'Конверсия', value: '3.5-4.2%' },
+      { metric: 'Рост лидов', value: '+280%' },
+    ],
+    date: '2025-03-25',
+    roi: 380,
+    revenue: '+280%',
+  },
+
+  // 4. Земельные участки - Славянка/Вырица
+  {
+    id: 4,
+    slug: 'land-plots-leningrad',
+    title: 'Оптимизация продаж земельных участков в Ленинградской области',
+    client: 'GC Riviera (Славянка, Вырица)',
+    description:
+      'Сегментация кампаний и внедрение сквозной аналитики для земельных участков',
+    services: ['context-ads', 'web-analytics'],
+    industry: 'real-estate',
+    image: '/images/cases/land-plots-case.jpg',
+    keyResults: [
+      { metric: 'CPL', value: '1100-1600₽' },
+      { metric: 'Заявки', value: '+170%' },
+      { metric: 'Bounce rate', value: '-28%' },
+      { metric: 'Сквозная аналитика', value: '100%' },
+    ],
+    date: '2025-02-10',
+    roi: 270,
+    revenue: '+170%',
+  },
+
+  // 5. PrefabHome.eu - Каркасные дома (зарубеж)
+  {
+    id: 5,
+    slug: 'prefabhome-eu-international',
+    title: 'Международная кампания для каркасных домов в Европе',
+    client: 'PrefabHome.eu',
+    description:
+      'Локализация рекламных кампаний под европейские рынки с культурной адаптацией',
+    services: ['context-ads', 'digital-strategy'],
+    industry: 'real-estate',
+    image: '/images/cases/prefabhome-case.jpg',
+    keyResults: [
+      { metric: 'CPL в €', value: '€35-€50' },
+      { metric: 'CTR', value: '3.4%' },
+      { metric: 'Bounce rate', value: '-35%' },
+      { metric: 'Страны', value: '8' },
+    ],
+    date: '2025-01-20',
+    roi: 420,
+    revenue: '+250%',
+  },
+
+  // 6. Evermod.eu - Модульные дома (зарубеж)
+  {
+    id: 6,
+    slug: 'evermod-eu-modular-homes',
+    title: 'Структурирование кампаний модульных домов Evermod в Европе',
+    client: 'Evermod.eu',
+    description:
+      'Оптимизация структуры рекламных кампаний по европейским странам с визуальной адаптацией',
+    services: ['context-ads', 'targeted-ads'],
+    industry: 'real-estate',
+    image: '/images/cases/evermod-case.jpg',
+    keyResults: [
+      { metric: 'CPL в €', value: '€28-€40' },
+      { metric: 'Лиды/месяц', value: '25-40' },
+      { metric: 'Страны', value: '6' },
+      { metric: 'ROI', value: '320%' },
+    ],
+    date: '2024-12-15',
+    roi: 320,
+    revenue: '+650%',
+  },
+
+  // 7. ГКБ №23 - Плановые операции
+  {
+    id: 7,
+    slug: 'hospital-23-operations',
+    title: 'Увеличение потока на плановые операции в ГКБ №23',
+    client: 'ГКБ №23 им. Давыдовского',
+    description:
+      'Привлечение пациентов на операции по желчному пузырю, грыже, сердцу и катаракте',
+    services: ['context-ads', 'targeted-ads'],
+    industry: 'healthcare',
+    image: '/images/cases/hospital-23-case.jpg',
+    keyResults: [
+      { metric: 'CTR', value: '7.2%' },
+      { metric: 'Конверсия', value: '10.8%' },
+      { metric: 'CPL', value: '435₽' },
+      { metric: 'Заявки', value: '1420' },
+    ],
+    date: '2024-11-30',
+    roi: 280,
+    revenue: '+85%',
+  },
+
+  // 8. ГКБ №24 - Эндоскопические процедуры
+  {
+    id: 8,
+    slug: 'hospital-24-endoscopy',
+    title: 'Рост записей на эндоскопические процедуры в ГКБ №24',
+    client: 'ГКБ №24',
+    description:
+      'Увеличение количества записей на колоноскопию, гастроскопию и удаление полипов',
+    services: ['context-ads', 'targeted-ads'],
+    industry: 'healthcare',
+    image: '/images/cases/hospital-24-case.jpg',
+    keyResults: [
+      { metric: 'CTR', value: '8.1%' },
+      { metric: 'Конверсия', value: '12.6%' },
+      { metric: 'CPL', value: '350₽' },
+      { metric: 'Заявки', value: '1470' },
+    ],
+    date: '2024-11-15',
+    roi: 320,
+    revenue: '+95%',
+  },
+
+  // 9. МСЗ - Москва Столица Здоровья
+  {
+    id: 9,
+    slug: 'moscow-health-capital-brand',
     title: 'Бренд-кампания для проекта «Москва Столица Здоровья»',
     client: 'Москва Столица Здоровья',
     description:
-      'Комплексное продвижение городской инициативы в Яндекс.Директ и ВКонтакте для повышения узнаваемости программы здравоохранения',
-    services: ['context-ads', 'targeted-ads', 'web-analytics'],
+      'Комплексное продвижение городской инициативы для повышения узнаваемости программы здравоохранения',
+    services: ['context-ads', 'targeted-ads', 'digital-strategy'],
     industry: 'healthcare',
-    image: '/images/cases/health-capital-case.jpg',
+    image: '/images/cases/moscow-health-case.jpg',
     keyResults: [
       { metric: 'Охват', value: '5M+' },
       { metric: 'Брендовые запросы', value: '+44%' },
       { metric: 'CTR в РСЯ', value: '0.56%' },
       { metric: 'Подписчики', value: '+8K' },
     ],
-    date: '2025-03-22',
+    date: '2024-10-25',
     roi: 275,
     revenue: '+44%',
-  },
-  // Добавить больше кейсов...
-  {
-    id: 4,
-    slug: 'fintech-startup-growth',
-    title: 'Запуск нового финтех-стартапа',
-    client: 'FinStart',
-    description:
-      'Разработка стратегии запуска для финансового приложения с нуля до 10K пользователей',
-    services: ['targeted-ads', 'web-analytics', 'cro', 'digital-strategy'],
-    industry: 'finance',
-    image: '/images/cases/fintech-case.jpg',
-    keyResults: [
-      { metric: 'Пользователи', value: '0 → 10K' },
-      { metric: 'CAC', value: '₽425' },
-      { metric: 'Retention D7', value: '45%' },
-      { metric: 'LTV/CAC', value: '3.2x' },
-    ],
-    date: '2025-02-10',
-    roi: 320,
-    revenue: '+0%',
-  },
-  {
-    id: 5,
-    slug: 'b2b-saas-lead-generation',
-    title: 'Генерация B2B-лидов для SaaS платформы',
-    client: 'CloudTech Solutions',
-    description:
-      'Создание воронки продаж для корпоративного программного обеспечения с фокусом на качественные лиды',
-    services: ['context-ads', 'cro', 'web-analytics'],
-    industry: 'b2b',
-    image: '/images/cases/b2b-saas-case.jpg',
-    keyResults: [
-      { metric: 'MQL', value: '+180%' },
-      { metric: 'SQL конверсия', value: '28%' },
-      { metric: 'Средний чек', value: '₽89K' },
-      { metric: 'Pipeline', value: '₽4.5M' },
-    ],
-    date: '2025-01-05',
-    roi: 450,
-    revenue: '+180%',
   },
 ]);
 
