@@ -10,6 +10,8 @@ import ContactsPage from '../pages/ContactsPage.vue'
 import PricingPage from '../pages/PricingPage.vue'
 import SearchPage from '../pages/SearchPage.vue'
 import NotFoundPage from '../pages/NotFoundPage.vue'
+import PrivacyPage from '../pages/PrivacyPage.vue'
+import TermsPage from '../pages/TermsPage.vue'
 
 const routes = [
   {
@@ -102,6 +104,24 @@ const routes = [
     meta: {
       title: 'Тарифы | RT-AGENCY',
       description: 'Стоимость услуг и условия сотрудничества',
+    }
+  },
+  {
+    path: '/privacy',
+    name: 'privacy',
+    component: PrivacyPage,
+    meta: {
+      title: 'Политика конфиденциальности | RT-AGENCY',
+      description: 'Информация о том, как RT-AGENCY собирает, использует и защищает ваши персональные данные.',
+    }
+  },
+  {
+    path: '/terms',
+    name: 'terms',
+    component: TermsPage,
+    meta: {
+      title: 'Условия использования | RT-AGENCY',
+      description: 'Правила и положения, регулирующие использование веб-сайта RT-AGENCY.',
     }
   },
   {
