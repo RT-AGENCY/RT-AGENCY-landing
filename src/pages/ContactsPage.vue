@@ -17,7 +17,7 @@
     <section class="py-12 md:py-16 bg-white">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <!-- Форма обратной связи -->
+          <!-- Форма обратной связи (вторая форма) -->
           <div>
             <ContactForm
               title="Напишите нам"
@@ -58,9 +58,7 @@
                 </div>
                 <div>
                   <h3 class="font-medium text-lg text-left">Адрес</h3>
-                  <p class="text-gray-600">
-                    г. Москва
-                  </p>
+                  <p class="text-gray-600">г. Москва</p>
                 </div>
               </div>
 
@@ -85,11 +83,11 @@
                 <div>
                   <h3 class="font-medium text-lg text-left">Телефон</h3>
                   <p class="text-gray-600">
-                    <a
+                    <!-- <a
                       href="tel:+79991234567"
                       class="hover:text-primary-600 transition-colors"
                       >+7 (999) 123-45-67</a
-                    >
+                    > -->
                   </p>
                 </div>
               </div>
@@ -118,8 +116,8 @@
                     <a
                       href="mailto:info@performance-agency.ru"
                       class="hover:text-primary-600 transition-colors"
-                      >info@performance-agency.ru</a
-                    >
+                      >sasha.af.one@gmail.com
+                    </a>
                   </p>
                 </div>
               </div>
@@ -250,7 +248,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useMeta } from '@/composables/useMeta';
 import ContactForm from '@/components/common/ContactForm.vue';
 
@@ -305,7 +303,6 @@ useMeta({
 
 onMounted(() => {
   // При необходимости добавить дополнительную логику при монтировании компонента
-  // Например, инициализация карты, если используете Mapbox или собственную логику для карт
 });
 </script>
 

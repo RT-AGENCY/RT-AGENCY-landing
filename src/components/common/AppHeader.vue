@@ -113,7 +113,7 @@ const navItems = [
   { name: 'Кейсы', path: '/cases', isDisable: true },
   { name: 'Блог', path: '/blog', isDisable: true },
   { name: 'О компании', path: '/about', isDisable: true },
-  { name: 'Контакты', path: '/contacts', isDisable: true },
+  { name: 'Контакты', path: '/contacts'},
   { name: 'Тарифы', path: '/pricing', isDisable: true },
 ];
 
