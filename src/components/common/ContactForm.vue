@@ -174,8 +174,8 @@ const preSelectedService = computed(() => props.service);
 <style scoped>
 .form-input {
   transition: all 0.2s ease-in-out;
-  color: #fff; /* Исправлен цвет текста для лучшей видимости */
-  background: rgb(3, 105, 161);
+  color: black; /* Исправлен цвет текста для лучшей видимости */
+  background: #fff;
 }
 
 .form-input:focus {
@@ -191,7 +191,7 @@ textarea.form-input {
   padding: 0.5rem 0.75rem;
   border-radius: 0.375rem;
   border: 1px solid #d1d5db;
-  color: #fff;
+  color: black;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -204,5 +204,9 @@ input[type='checkbox'] {
 /* Стили для метки чекбокса */
 input[type='checkbox'] + div label {
   cursor: pointer;
+}
+
+.contact-form {
+  background: rgb(243 244 246);
 }
 </style>

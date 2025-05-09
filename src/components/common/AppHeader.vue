@@ -113,7 +113,7 @@ const isMenuOpen = ref(false);
 const navItems = [
   { name: 'Главная', path: '/' },
   { name: 'Услуги', path: '/services', isDisable: true },
-  { name: 'Кейсы', path: '/cases', isDisable: true },
+  { name: 'Кейсы', path: '/cases' },
   { name: 'Блог', path: '/blog', isDisable: true },
   { name: 'О компании', path: '/about' },
   { name: 'Контакты', path: '/contacts' },
