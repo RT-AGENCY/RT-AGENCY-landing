@@ -1,6 +1,7 @@
 <template>
   <div>
     <HeroSection />
+    <NicheSpecialization />
     <ServicesPreview />
     <StatisticsBlock />
     <CasesPreview />
@@ -57,6 +58,7 @@ import StatisticsBlock from '@/components/home/StatisticsBlock.vue';
 import CasesPreview from '@/components/home/CasesPreview.vue';
 import TestimonialsSlider from '@/components/home/TestimonialsSlider.vue';
 import ClientsLogos from '@/components/home/ClientsLogos.vue';
+import NicheSpecialization from '../components/home/NicheSpecialization.vue';
 
 // Мета-теги для SEO
 useMeta({
