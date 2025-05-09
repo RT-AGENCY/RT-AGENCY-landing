@@ -24,7 +24,7 @@
             <router-link to="/contacts" class="btn btn-primary hover:text-white">
               Получить консультацию
             </router-link>
-            <a href="tel:+79991234567" class="btn btn-outline">
+            <!-- <a href="tel:+79991234567" class="btn btn-outline">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5 mr-2"
@@ -40,7 +40,7 @@
                 />
               </svg>
               Позвонить нам
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
@@ -71,9 +71,8 @@ useMeta({
     name: 'RT-AGENCY',
     description:
       'Performance-маркетинговое агентство, специализирующееся на контекстной и таргетированной рекламе, SEO и оптимизации конверсий.',
-    url: 'https://performance-agency.ru',
-    telephone: '+79991234567',
-    email: 'info@performance-agency.ru',
+    url: 'https://rt-ads.ru',
+    email: 'sasha.af.one@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Адрес агентства',
