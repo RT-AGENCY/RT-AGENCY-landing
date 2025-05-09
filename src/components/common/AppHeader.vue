@@ -67,7 +67,10 @@
 
         <!-- Кнопка действия -->
         <div class="hidden md:block">
-          <router-link to="/contacts" class="btn btn-primary hover:text-white p-2 lg:p-4 text-sm lg:text-base">
+          <router-link
+            to="/contacts"
+            class="btn btn-primary hover:text-white p-2 lg:p-4 text-sm lg:text-base"
+          >
             Оставить заявку
           </router-link>
         </div>
@@ -112,8 +115,8 @@ const navItems = [
   { name: 'Услуги', path: '/services', isDisable: true },
   { name: 'Кейсы', path: '/cases', isDisable: true },
   { name: 'Блог', path: '/blog', isDisable: true },
-  { name: 'О компании', path: '/about', isDisable: true },
-  { name: 'Контакты', path: '/contacts'},
+  { name: 'О компании', path: '/about' },
+  { name: 'Контакты', path: '/contacts' },
   { name: 'Тарифы', path: '/pricing', isDisable: true },
 ];
 
