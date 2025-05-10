@@ -1,12 +1,54 @@
 <template>
-  <section
-    class="hero-section relative text-white overflow-hidden"
-  >
+  <section class="hero-section relative text-white overflow-hidden">
     <div class="absolute inset-0 bg-gradient-animate">
       <div
         class="absolute inset-0 opacity-90 bg-gradient-to-br from-primary-700 via-primary-800 to-primary-900"
       ></div>
     </div>
+    <!-- Сетка инструментов справа -->
+    <div
+      class="absolute right-0 top-0 h-full w-1/3 hidden lg:block overflow-hidden"
+    >
+      <div class="relative h-full flex items-center justify-center">
+        <!-- Google Ads -->
+        <div
+          class="absolute top-20 right-20 bg-white/10 p-4 rounded-lg animate-pulse"
+        >
+          <img
+            src="@/assets/images/icons/google-ads.svg"
+            alt="Google Ads"
+            class="w-12 h-12 opacity-80"
+          />
+        </div>
+        <!-- Яндекс.Директ -->
+        <div
+          class="absolute top-40 right-40 bg-white/10 p-4 rounded-lg animate-pulse delay-75"
+        >
+          <img
+            src="@/assets/images/icons/ya-direct.svg"
+            alt="Яндекс"
+            class="w-12 h-12 opacity-80"
+          />
+        </div>
+        <!-- Analytics -->
+        <div
+          class="absolute bottom-40 right-20 bg-white/10 p-4 rounded-lg animate-pulse delay-150"
+        >
+          <img
+            src="@/assets/images/icons/google-analytics.svg"
+            alt="Analytics"
+            class="w-12 h-12 opacity-80"
+          />
+        </div>
+        <!-- VK -->
+        <div
+          class="absolute bottom-20 right-40 bg-white/10 p-4 rounded-lg animate-pulse delay-225"
+        >
+          <img src="@/assets/images/icons/vk.svg" alt="VK" class="w-12 h-12 opacity-80" />
+        </div>
+      </div>
+    </div>
+
     <div
       class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative z-10"
     >
