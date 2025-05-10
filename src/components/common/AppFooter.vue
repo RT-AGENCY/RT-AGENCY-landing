@@ -78,12 +78,12 @@
               :key="service.slug"
               class="text-left"
             >
-              <router-link
+              <!-- <router-link
                 :to="`/services/${service.slug}`"
                 class="text-gray-400 hover:text-white"
-              >
-                {{ service.name }}
-              </router-link>
+              > -->
+              <span class="text-gray-400"> {{ service.name }}</span>
+              <!-- </router-link> -->
             </li>
           </ul>
         </div>
@@ -134,7 +134,11 @@
                   d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
                 />
               </svg>
-              <a href="mailto:sasha.af.one@gmail.com" class="text-nowrap text-gray-400">sasha.af.one@gmail.com</a>
+              <a
+                href="mailto:sasha.af.one@gmail.com"
+                class="text-nowrap text-gray-400"
+                >sasha.af.one@gmail.com</a
+              >
             </li>
           </ul>
         </div>
