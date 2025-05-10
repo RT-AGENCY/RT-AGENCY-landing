@@ -1,43 +1,12 @@
 <template>
   <section
-    class="hero-section relative bg-gradient-to-r from-primary-700 to-primary-900 text-white"
+    class="hero-section relative text-white overflow-hidden"
   >
-    <!-- Декоративный фон -->
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute opacity-10 top-0 right-0 w-1/2 h-full">
-        <!-- Здесь может быть декоративный SVG паттерн -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 800 800"
-          class="w-full h-full"
-        >
-          <rect width="800" height="800" fill="none"></rect>
-          <g>
-            <path
-              fill="currentColor"
-              d="M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63"
-            ></path>
-            <path
-              fill="currentColor"
-              d="M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764"
-            ></path>
-            <path
-              fill="currentColor"
-              d="M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880"
-            ></path>
-            <path
-              fill="currentColor"
-              d="M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382"
-            ></path>
-            <path
-              fill="currentColor"
-              d="M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-31 229"
-            ></path>
-          </g>
-        </svg>
-      </div>
+    <div class="absolute inset-0 bg-gradient-animate">
+      <div
+        class="absolute inset-0 opacity-90 bg-gradient-to-br from-primary-700 via-primary-800 to-primary-900"
+      ></div>
     </div>
-
     <div
       class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative z-10"
     >
@@ -89,5 +58,32 @@
   .hero-section {
     min-height: 80vh;
   }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
 }
 </style>

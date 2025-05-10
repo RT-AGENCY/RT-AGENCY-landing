@@ -32,7 +32,7 @@
         <p class="text-lg font-medium mb-6">
           Мы работаем с лидерами рынка — от недвижимости до высоких технологий
         </p>
-        <router-link to="/cases" class="btn btn-outline hover:text-white">
+        <router-link to="/cases" class="btn btn-outline hover:text-white hover:bg-primary-700">
           Посмотреть кейсы
         </router-link>
       </div>
