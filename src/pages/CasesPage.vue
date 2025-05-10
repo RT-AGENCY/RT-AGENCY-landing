@@ -244,7 +244,9 @@
               </div>
 
               <!-- Title -->
-              <h3 class="text-xl font-bold mb-2 text-start">{{ caseItem.title }}</h3>
+              <h3 class="text-xl font-bold mb-2 text-start">
+                {{ caseItem.title }}
+              </h3>
 
               <!-- Company -->
               <p class="text-sm text-gray-600 mb-3">{{ caseItem.client }}</p>
@@ -378,9 +380,15 @@
 import { ref, computed, onMounted } from 'vue';
 import { useMeta } from '@/composables/useMeta';
 
-import nikeImg from '@/assets/images/cases/nike.jpg'
-import evermodImg from '@/assets/images/cases/Evermod.webp'
-import mszImg from '@/assets/images/cases/msz.webp'
+import nikeImg from '@/assets/images/cases/nike.jpg';
+import evermodImg from '@/assets/images/cases/Evermod.webp';
+import mszImg from '@/assets/images/cases/msz.webp';
+import gatchinaImg from '@/assets/images/cases/gatchina.webp';
+import vyritsaImg from '@/assets/images/cases/vyritsa.webp';
+import holtsovImg from '@/assets/images/cases/holtsov.webp';
+import prefabImg from '@/assets/images/cases/prefab.webp';
+import gkb23Img from '@/assets/images/cases/gkb-23.webp';
+import gkb24Img from '@/assets/images/cases/gkb-24.webp';
 
 // Реактивные данные для фильтров
 const searchQuery = ref('');
@@ -444,7 +452,7 @@ const allCases = ref([
       'Оптимизация контекстной рекламы для коттеджных поселков в Санкт-Петербурге и Ленинградской области',
     services: ['context-ads', 'web-analytics', 'cro'],
     industry: 'real-estate',
-    // image: '/images/cases/gc-riviera-case.jpg',
+    image: gatchinaImg,
     keyResults: [
       { metric: 'CPL', value: '1200-1800₽' },
       { metric: 'Конверсия', value: '2.5-3.2%' },
@@ -466,7 +474,7 @@ const allCases = ref([
       'Реструктуризация контекстной рекламы с полной сменой стратегии и проведением A/B тестов',
     services: ['context-ads', 'cro'],
     industry: 'real-estate',
-    // image: '/images/cases/holtsov-case.jpg',
+    image: holtsovImg,
     keyResults: [
       { metric: 'CTR', value: '3.6%' },
       { metric: 'CPL', value: '1000-1300₽' },
@@ -488,7 +496,7 @@ const allCases = ref([
       'Сегментация кампаний и внедрение сквозной аналитики для земельных участков',
     services: ['context-ads', 'web-analytics'],
     industry: 'real-estate',
-    // image: '/images/cases/land-plots-case.jpg',
+    image: vyritsaImg,
     keyResults: [
       { metric: 'CPL', value: '1100-1600₽' },
       { metric: 'Заявки', value: '+170%' },
@@ -510,7 +518,7 @@ const allCases = ref([
       'Локализация рекламных кампаний под европейские рынки с культурной адаптацией',
     services: ['context-ads', 'digital-strategy'],
     industry: 'real-estate',
-    // image: '/images/cases/prefabhome-case.jpg',
+    image: prefabImg,
     keyResults: [
       { metric: 'CPL в €', value: '€35-€50' },
       { metric: 'CTR', value: '3.4%' },
@@ -554,7 +562,7 @@ const allCases = ref([
       'Привлечение пациентов на операции по желчному пузырю, грыже, сердцу и катаракте',
     services: ['context-ads', 'targeted-ads'],
     industry: 'healthcare',
-    // image: '/images/cases/hospital-23-case.jpg',
+    image: gkb23Img,
     keyResults: [
       { metric: 'CTR', value: '7.2%' },
       { metric: 'Конверсия', value: '10.8%' },
@@ -576,7 +584,7 @@ const allCases = ref([
       'Увеличение количества записей на колоноскопию, гастроскопию и удаление полипов',
     services: ['context-ads', 'targeted-ads'],
     industry: 'healthcare',
-    // image: '/images/cases/hospital-24-case.jpg',
+    image: gkb24Img,
     keyResults: [
       { metric: 'CTR', value: '8.1%' },
       { metric: 'Конверсия', value: '12.6%' },
