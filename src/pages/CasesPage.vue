@@ -281,7 +281,7 @@
               </div>
 
               <!-- CTA Button -->
-              <router-link
+              <!-- <router-link
                 :to="`/cases/${caseItem.slug}`"
                 class="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 mt-auto"
               >
@@ -298,7 +298,7 @@
                     clip-rule="evenodd"
                   />
                 </svg>
-              </router-link>
+              </router-link> -->
             </div>
           </div>
         </div>

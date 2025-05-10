@@ -112,12 +112,12 @@ const isMenuOpen = ref(false);
 // Определение пунктов меню
 const navItems = [
   { name: 'Главная', path: '/' },
-  { name: 'Услуги', path: '/services', isDisable: true },
+  // { name: 'Услуги', path: '/services', isDisable: true },
   { name: 'Кейсы', path: '/cases' },
-  { name: 'Блог', path: '/blog', isDisable: true },
+  // { name: 'Блог', path: '/blog', isDisable: true },
   { name: 'О компании', path: '/about' },
   { name: 'Контакты', path: '/contacts' },
-  { name: 'Тарифы', path: '/pricing', isDisable: true },
+  // { name: 'Тарифы', path: '/pricing', isDisable: true },
 ];
 
 // Проверка активного маршрута
