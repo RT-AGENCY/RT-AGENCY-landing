@@ -171,12 +171,12 @@ import AppLogo from './AppLogo.vue';
 // Определение пунктов меню
 const navItems = [
   { name: 'Главная', path: '/' },
-  { name: 'Услуги', path: '/services' },
+  // { name: 'Услуги', path: '/services' },
   { name: 'Кейсы', path: '/cases' },
-  { name: 'Блог', path: '/blog' },
+  // { name: 'Блог', path: '/blog' },
   { name: 'О компании', path: '/about' },
   { name: 'Контакты', path: '/contacts' },
-  { name: 'Тарифы', path: '/pricing' },
+  // { name: 'Тарифы', path: '/pricing' },
 ];
 
 // Услуги

@@ -35,7 +35,7 @@
             {{ service.description }}
           </p>
 
-          <router-link
+          <!-- <router-link
             :to="`/services/${service.slug}`"
             class="inline-flex items-center text-primary-600 font-medium hover:text-primary-700"
           >
@@ -52,16 +52,16 @@
                 clip-rule="evenodd"
               />
             </svg>
-          </router-link>
+          </router-link> -->
         </div>
       </div>
 
       <!-- Кнопка "Все услуги" -->
-      <div class="text-center mt-12">
+      <!-- <div class="text-center mt-12">
         <router-link to="/services" class="btn btn-primary hover:text-white">
           Все услуги
         </router-link>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>

@@ -80,7 +80,7 @@
             </div>
 
             <!-- Кнопка "Подробнее" -->
-            <router-link
+            <!-- <router-link
               :to="`/cases/${caseItem.slug}`"
               class="inline-flex items-end text-primary-600 font-medium hover:text-primary-700 flex-1"
             >
@@ -97,7 +97,7 @@
                   clip-rule="evenodd"
                 />
               </svg>
-            </router-link>
+            </router-link> -->
           </div>
         </div>
       </div>

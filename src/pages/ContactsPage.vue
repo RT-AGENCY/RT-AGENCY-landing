@@ -3,7 +3,7 @@
     <!-- Шапка страницы -->
     <section class="bg-primary-700 text-white py-12 md:py-20">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl">
+        <div class="max-w-3xl text-left">
           <h1 class="text-3xl md:text-4xl font-bold mb-4">Свяжитесь с нами</h1>
           <p class="text-xl opacity-90">
             Оставьте заявку для консультации или напишите нам — ответим в
