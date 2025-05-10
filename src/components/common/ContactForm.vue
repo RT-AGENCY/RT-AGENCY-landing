@@ -112,7 +112,7 @@
               id="privacy"
               type="checkbox"
               name="privacy"
-              class="h-4 w-4 text-primary-600 rounded border-gray-300 focus:ring-primary-500"
+              class="appearance-none h-4 w-4 bg-gray-100 border border-gray-300 rounded checked:bg-primary-600 checked:appearance-auto checked:border-primary-600 hover:bg-gray-200 custom-checkbox"
               required
             />
           </div>

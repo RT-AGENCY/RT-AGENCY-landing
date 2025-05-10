@@ -378,6 +378,10 @@
 import { ref, computed, onMounted } from 'vue';
 import { useMeta } from '@/composables/useMeta';
 
+import nikeImg from '@/assets/images/cases/nike.jpg'
+import evermodImg from '@/assets/images/cases/Evermod.webp'
+import mszImg from '@/assets/images/cases/msz.webp'
+
 // Реактивные данные для фильтров
 const searchQuery = ref('');
 const selectedService = ref('');
@@ -418,7 +422,7 @@ const allCases = ref([
       'Комплексное продвижение в ВКонтакте, Facebook, Instagram, Яндекс.Директ и Google Ads для увеличения регистраций на брендовые мероприятия',
     services: ['context-ads', 'targeted-ads', 'complex'],
     industry: 'retail',
-    image: '/images/cases/nike-case.jpg',
+    image: nikeImg,
     keyResults: [
       { metric: 'Регистрации', value: '+62%' },
       { metric: 'ROAS', value: '4.1' },
@@ -440,7 +444,7 @@ const allCases = ref([
       'Оптимизация контекстной рекламы для коттеджных поселков в Санкт-Петербурге и Ленинградской области',
     services: ['context-ads', 'web-analytics', 'cro'],
     industry: 'real-estate',
-    image: '/images/cases/gc-riviera-case.jpg',
+    // image: '/images/cases/gc-riviera-case.jpg',
     keyResults: [
       { metric: 'CPL', value: '1200-1800₽' },
       { metric: 'Конверсия', value: '2.5-3.2%' },
@@ -462,7 +466,7 @@ const allCases = ref([
       'Реструктуризация контекстной рекламы с полной сменой стратегии и проведением A/B тестов',
     services: ['context-ads', 'cro'],
     industry: 'real-estate',
-    image: '/images/cases/holtsov-case.jpg',
+    // image: '/images/cases/holtsov-case.jpg',
     keyResults: [
       { metric: 'CTR', value: '3.6%' },
       { metric: 'CPL', value: '1000-1300₽' },
@@ -484,7 +488,7 @@ const allCases = ref([
       'Сегментация кампаний и внедрение сквозной аналитики для земельных участков',
     services: ['context-ads', 'web-analytics'],
     industry: 'real-estate',
-    image: '/images/cases/land-plots-case.jpg',
+    // image: '/images/cases/land-plots-case.jpg',
     keyResults: [
       { metric: 'CPL', value: '1100-1600₽' },
       { metric: 'Заявки', value: '+170%' },
@@ -506,7 +510,7 @@ const allCases = ref([
       'Локализация рекламных кампаний под европейские рынки с культурной адаптацией',
     services: ['context-ads', 'digital-strategy'],
     industry: 'real-estate',
-    image: '/images/cases/prefabhome-case.jpg',
+    // image: '/images/cases/prefabhome-case.jpg',
     keyResults: [
       { metric: 'CPL в €', value: '€35-€50' },
       { metric: 'CTR', value: '3.4%' },
@@ -528,7 +532,7 @@ const allCases = ref([
       'Оптимизация структуры рекламных кампаний по европейским странам с визуальной адаптацией',
     services: ['context-ads', 'targeted-ads'],
     industry: 'real-estate',
-    image: '/images/cases/evermod-case.jpg',
+    image: evermodImg,
     keyResults: [
       { metric: 'CPL в €', value: '€28-€40' },
       { metric: 'Лиды/месяц', value: '25-40' },
@@ -550,7 +554,7 @@ const allCases = ref([
       'Привлечение пациентов на операции по желчному пузырю, грыже, сердцу и катаракте',
     services: ['context-ads', 'targeted-ads'],
     industry: 'healthcare',
-    image: '/images/cases/hospital-23-case.jpg',
+    // image: '/images/cases/hospital-23-case.jpg',
     keyResults: [
       { metric: 'CTR', value: '7.2%' },
       { metric: 'Конверсия', value: '10.8%' },
@@ -572,7 +576,7 @@ const allCases = ref([
       'Увеличение количества записей на колоноскопию, гастроскопию и удаление полипов',
     services: ['context-ads', 'targeted-ads'],
     industry: 'healthcare',
-    image: '/images/cases/hospital-24-case.jpg',
+    // image: '/images/cases/hospital-24-case.jpg',
     keyResults: [
       { metric: 'CTR', value: '8.1%' },
       { metric: 'Конверсия', value: '12.6%' },
@@ -594,7 +598,7 @@ const allCases = ref([
       'Комплексное продвижение городской инициативы для повышения узнаваемости программы здравоохранения',
     services: ['context-ads', 'targeted-ads', 'digital-strategy'],
     industry: 'healthcare',
-    image: '/images/cases/moscow-health-case.jpg',
+    image: mszImg,
     keyResults: [
       { metric: 'Охват', value: '5M+' },
       { metric: 'Брендовые запросы', value: '+44%' },
@@ -738,6 +742,7 @@ onMounted(() => {
 
 .case-input {
   background: beige;
+  height: 42px;
 }
 
 /* Анимации для hover-эффектов */
