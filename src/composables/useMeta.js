@@ -12,7 +12,7 @@ export function useMeta(options = {}) {
 
   const title = computed(() => options.title ? `${options.title} | ${siteName}` : siteName)
   const description = computed(() => options.description || siteDescription)
-  const image = computed(() => options.image || '/logo.png')
+  const image = computed(() => options.image || 'https://rt-ads.ru/logo.svg')
   const url = computed(() => options.url || (typeof window !== 'undefined' ? window.location.href : ''))
 
   // Устанавливаем метаданные через useHead
@@ -23,7 +23,12 @@ export function useMeta(options = {}) {
       { name: 'description', content: description },
       { name: 'robots', content: options.robots || 'index, follow' },
 
-      // OpenGraph мета-теги для социальных сетей
+      // Добавьте эти:
+      { name: 'keywords', content: options.keywords },
+      { name: 'author', content: options.author || 'RT-AGENCY' },
+      { 'http-equiv': 'content-language', content: options.language || 'ru' },
+
+      // OpenGraph meta
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },
       { property: 'og:image', content: image },
@@ -31,14 +36,15 @@ export function useMeta(options = {}) {
       { property: 'og:type', content: options.ogType || 'website' },
       { property: 'og:site_name', content: siteName },
 
-      // Twitter карточка
+      // Twitter card
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
       { name: 'twitter:image', content: image },
-
-      // Canonical URL для предотвращения дублированного контента
-      { rel: 'canonical', href: url }
+    ],
+    link: [
+      { rel: 'canonical', href: url },
+      { rel: 'alternate', href: options.alternateUrl, hreflang: options.hreflang },
     ],
 
     // Схема разметки для поисковых систем
