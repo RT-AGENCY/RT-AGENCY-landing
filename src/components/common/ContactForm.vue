@@ -33,7 +33,7 @@
           type="text"
           id="name"
           name="name"
-          class="form-input"
+          class="form-input h-10"
           placeholder="Иван Иванов"
           required
         />
@@ -45,7 +45,7 @@
           type="text"
           id="company"
           name="company"
-          class="form-input"
+          class="form-input h-10"
           placeholder="ООО Рога и Копыта"
         />
       </div>
@@ -53,7 +53,7 @@
       <!-- Выпадающий список с услугами -->
       <div class="form-group" v-if="services && services.length">
         <label for="service" class="form-label">Интересующая услуга</label>
-        <select id="service" name="service" class="form-input">
+        <select id="service" name="service" class="form-input h-10">
           <option value="">Выберите услугу</option>
           <option
             v-for="service in services"
@@ -74,7 +74,7 @@
           type="tel"
           id="phone"
           name="phone"
-          class="form-input"
+          class="form-input h-10"
           placeholder="+7 (999) 123-45-67"
           required
         />
@@ -88,7 +88,7 @@
           type="email"
           id="email"
           name="email"
-          class="form-input"
+          class="form-input h-10"
           placeholder="example@company.com"
           required
         />
@@ -116,7 +116,7 @@
               required
             />
           </div>
-          <div class="ml-3 text-sm">
+          <div class="ml-3 text-sm text-start">
             <label for="privacy" class="text-gray-600">
               Я согласен на обработку персональных данных согласно
               <router-link
