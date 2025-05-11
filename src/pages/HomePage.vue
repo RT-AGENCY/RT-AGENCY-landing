@@ -22,7 +22,10 @@
             бизнес и предложим стратегию роста.
           </p>
           <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <router-link to="/contacts" class="btn btn-primary hover:text-white">
+            <router-link
+              to="/contacts"
+              class="btn btn-primary hover:text-white"
+            >
               Получить консультацию
             </router-link>
             <!-- <a href="tel:+79991234567" class="btn btn-outline">
@@ -62,10 +65,28 @@ import NicheSpecialization from '../components/home/NicheSpecialization.vue';
 
 // Мета-теги для SEO
 useMeta({
-  title: 'Главная',
+  meta: [
+    {
+      name: 'keywords',
+      content:
+        'performance маркетинг, контекстная реклама, SEO, оптимизация конверсий, Москва',
+    },
+    { name: 'author', content: 'RT-AGENCY' },
+    { 'http-equiv': 'content-language', content: 'ru' },
+    { name: 'robots', content: 'index, follow' },
+  ],
+  link: [
+    { rel: 'alternate', href: 'https://rt-ads.ru/', hreflang: 'ru' },
+    { rel: 'canonical', href: 'https://rt-ads.ru/' },
+  ],
+  title: 'Главная | RT-AGENCY',
   description:
     'Performance-маркетинговое агентство, специализирующееся на контекстной и таргетированной рекламе, SEO и оптимизации конверсий.',
   ogType: 'website',
+  ogImage: 'https://rt-ads.ru/logo.svg',
+  ogUrl: 'https://rt-ads.ru/',
+  ogSiteName: 'RT-AGENCY',
+  twitterCard: 'summary_large_image',
   // Schema.org разметка для локального бизнеса
   schema: {
     '@context': 'https://schema.org',
@@ -73,13 +94,15 @@ useMeta({
     name: 'RT-AGENCY',
     description:
       'Performance-маркетинговое агентство, специализирующееся на контекстной и таргетированной рекламе, SEO и оптимизации конверсий.',
+    logo: 'https://rt-ads.ru/logo.svg',
     url: 'https://rt-ads.ru',
     email: 'sasha.af.one@gmail.com',
+    priceRange: '₽₽',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Адрес агентства',
+      streetAddress: 'ул. Примерная, д. 1', // добавьте реальный адрес
       addressLocality: 'Москва',
-      postalCode: '123456',
+      postalCode: '123456', // добавьте реальный почтовый код
       addressCountry: 'RU',
     },
     openingHoursSpecification: {
@@ -87,7 +110,7 @@ useMeta({
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
       opens: '09:00',
       closes: '18:00',
-    },
+    }
   },
 });
 
