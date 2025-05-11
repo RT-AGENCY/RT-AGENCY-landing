@@ -23,24 +23,24 @@ const routes = [
       description: 'Маркетинговое агентство, специализирующееся на performance-маркетинге',
     }
   },
-  {
-    path: '/services',
-    name: 'services',
-    component: ServicesPage,
-    meta: {
-      title: 'Услуги | RT-AGENCY',
-      description: 'Полный спектр услуг по digital-маркетингу: контекстная и таргетированная реклама, SEO, CRO',
-    }
-  },
-  {
-    path: '/services/:slug',
-    name: 'service-detail',
-    component: ServiceDetailPage,
-    meta: {
-      title: 'Услуга | RT-AGENCY',
-      description: 'Подробное описание услуги с кейсами и результатами'
-    }
-  },
+  // {
+  //   path: '/services',
+  //   name: 'services',
+  //   component: ServicesPage,
+  //   meta: {
+  //     title: 'Услуги | RT-AGENCY',
+  //     description: 'Полный спектр услуг по digital-маркетингу: контекстная и таргетированная реклама, SEO, CRO',
+  //   }
+  // },
+  // {
+  //   path: '/services/:slug',
+  //   name: 'service-detail',
+  //   component: ServiceDetailPage,
+  //   meta: {
+  //     title: 'Услуга | RT-AGENCY',
+  //     description: 'Подробное описание услуги с кейсами и результатами'
+  //   }
+  // },
   {
     path: '/cases',
     name: 'cases',
@@ -50,62 +50,54 @@ const routes = [
       description: 'Наши успешные кейсы и результаты работы с клиентами',
     }
   },
-  {
-    path: '/cases/:slug',
-    name: 'case-detail',
-    component: CaseDetailPage,
-    meta: {
-      title: 'Кейс | RT-AGENCY',
-      description: 'Детальный разбор кейса с результатами и использованными инструментами'
-    }
-  },
-  {
-    path: '/blog',
-    name: 'blog',
-    component: BlogPage,
-    meta: {
-      title: 'Блог | RT-AGENCY',
-      description: 'Статьи, гайды и новости по маркетингу и рекламе',
-      layout: 'blog'
-    }
-  },
-  {
-    path: '/blog/:slug',
-    name: 'blog-post',
-    component: BlogPostPage,
-    meta: {
-      title: 'Статья | RT-AGENCY',
-      description: 'Полезные материалы по маркетингу и рекламе',
-      layout: 'blog'
-    }
-  },
+  // {
+  //   path: '/cases/:slug',
+  //   name: 'case-detail',
+  //   component: CaseDetailPage,
+  //   meta: {
+  //     title: 'Кейс | RT-AGENCY',
+  //     description: 'Детальный разбор кейса с результатами и использованными инструментами'
+  //   }
+  // },
+  // {
+  //   path: '/blog',
+  //   name: 'blog',
+  //   component: BlogPage,
+  //   meta: {
+  //     title: 'Блог | RT-AGENCY',
+  //     description: 'Статьи, гайды и новости по маркетингу и рекламе',
+  //     layout: 'blog'
+  //   }
+  // },
+  // {
+  //   path: '/blog/:slug',
+  //   name: 'blog-post',
+  //   component: BlogPostPage,
+  //   meta: {
+  //     title: 'Статья | RT-AGENCY',
+  //     description: 'Полезные материалы по маркетингу и рекламе',
+  //     layout: 'blog'
+  //   }
+  // },
   {
     path: '/about',
     name: 'about',
     component: AboutPage,
-    meta: {
-      title: 'О компании | RT-AGENCY',
-      description: 'История, команда и ценности нашего агентства',
-    }
   },
   {
     path: '/contacts',
     name: 'contacts',
     component: ContactsPage,
-    meta: {
-      title: 'Контакты | RT-AGENCY',
-      description: 'Свяжитесь с нами для консультации по вопросам рекламы',
-    }
   },
-  {
-    path: '/pricing',
-    name: 'pricing',
-    component: PricingPage,
-    meta: {
-      title: 'Тарифы | RT-AGENCY',
-      description: 'Стоимость услуг и условия сотрудничества',
-    }
-  },
+  // {
+  //   path: '/pricing',
+  //   name: 'pricing',
+  //   component: PricingPage,
+  //   meta: {
+  //     title: 'Тарифы | RT-AGENCY',
+  //     description: 'Стоимость услуг и условия сотрудничества',
+  //   }
+  // },
   {
     path: '/privacy',
     name: 'privacy',
@@ -124,15 +116,15 @@ const routes = [
       description: 'Правила и положения, регулирующие использование веб-сайта RT-AGENCY.',
     }
   },
-  {
-    path: '/search',
-    name: 'search',
-    component: SearchPage,
-    meta: {
-      title: 'Поиск | RT-AGENCY',
-      description: 'Поиск по сайту',
-    }
-  },
+  // {s
+  //   path: '/search',
+  //   name: 'search',
+  //   component: SearchPage,
+  //   meta: {
+  //     title: 'Поиск | RT-AGENCY',
+  //     description: 'Поиск по сайту',
+  //   }
+  // },
   {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
