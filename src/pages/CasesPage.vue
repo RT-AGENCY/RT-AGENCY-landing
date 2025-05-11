@@ -703,32 +703,33 @@ const loadMoreCases = () => {
 
 // Мета-теги для SEO
 useMeta({
-  title: 'Кейсы',
+  title: 'Кейсы | Результаты работы RT-AGENCY',
   description:
-    'Изучите примеры успешной работы нашего агентства: повышение конверсий, увеличение ROI и рост продаж через digital-маркетинг.',
+    'Изучите 9 успешных кейсов: от Nike до недвижимости. Рост ROI до 420%, снижение CPL на 35%.',
+  keywords:
+    'кейсы маркетингового агентства, успешные примеры рекламы, результаты контекстной рекламы',
+  ogImage: 'https://rt-ads.ru/logo.svg',
+  link: [{ rel: 'canonical', href: 'https://rt-ads.ru/cases' }],
   ogType: 'website',
   schema: {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    headline: 'Кейсы RT-AGENCY',
-    description:
-      'Коллекция успешных кейсов и примеров работы от агентства RT-AGENCY',
+    name: 'Кейсы RT-AGENCY',
+    description: 'Успешные примеры работы агентства RT-AGENCY',
     url: 'https://rt-ads.ru/cases',
-    mainEntity: {
-      '@type': 'ItemList',
-      numberOfItems: allCases.value.length,
-      itemListElement: allCases.value.map((caseItem, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        item: {
-          '@type': 'TechArticle',
-          headline: caseItem.title,
-          description: caseItem.description,
-          image: caseItem.image,
-          url: `https://rt-ads.ru/cases/${caseItem.slug}`,
+    hasPart: [
+      // Добавить каждый кейс как Case Study
+      {
+        '@type': 'Case',
+        headline: 'Мультиканальная кампания Nike',
+        description: '+62% регистраций, ROI 410%',
+        image: 'https://rt-ads.ru/images/cases/nike.jpg',
+        author: {
+          '@type': 'Organization',
+          name: 'RT-AGENCY',
         },
-      })),
-    },
+      },
+    ],
   },
 });
 

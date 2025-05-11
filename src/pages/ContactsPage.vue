@@ -266,37 +266,34 @@ const services = ref([
 
 // Мета-теги для SEO
 useMeta({
-  title: 'Контакты',
+  title: 'Контакты | Свяжитесь с RT-AGENCY',
   description:
-    'Свяжитесь с нами для консультации по рекламе и маркетингу. Наша команда поможет увеличить продажи вашего бизнеса.',
+    'Получите бесплатную консультацию по маркетингу. Email: sasha.af.one@gmail.com. Офис в Москве.',
+  keywords:
+    'контакты маркетингового агентства, консультация по рекламе, rt agency москва',
+  ogImage: 'https://rt-ads.ru/logo.svg',
+  link: [{ rel: 'canonical', href: 'https://rt-ads.ru/contacts' }],
   ogType: 'website',
   // Schema.org разметка для локального бизнеса
   schema: {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'RT-AGENCY',
-    description:
-      'Performance-маркетинговое агентство, специализирующееся на контекстной и таргетированной рекламе, SEO и оптимизации конверсий.',
-    url: 'https://performance-agency.ru',
-    telephone: '+79991234567',
-    email: 'info@performance-agency.ru',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'ул. Примерная, 123, офис 45',
-      addressLocality: 'Москва',
-      postalCode: '123456',
-      addressCountry: 'RU',
-    },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '18:00',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: '55.7572',
-      longitude: '37.6186',
+    '@type': 'ContactPage',
+    name: 'Контакты RT-AGENCY',
+    url: 'https://rt-ads.ru/contacts',
+    mainEntity: {
+      '@type': 'Organization',
+      name: 'RT-AGENCY',
+      email: 'sasha.af.one@gmail.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Москва',
+        addressCountry: 'RU',
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        email: 'sasha.af.one@gmail.com',
+      },
     },
   },
 });

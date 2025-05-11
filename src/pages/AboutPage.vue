@@ -323,9 +323,13 @@ import { onMounted } from 'vue';
 import { useMeta } from '@/composables/useMeta';
 
 useMeta({
-  title: 'О компании',
+  title: 'О компании | RT-AGENCY - 12 лет в маркетинге',
   description:
-    'RT-AGENCY — команда профессионалов в области performance-маркетинга с 12-летним опытом. Узнайте о нашей миссии, ценностях и экспертах, которые помогут вашему бизнесу расти.',
+    'Команда сертифицированных специалистов с опытом работы в Nike, Сбербанк, Evermod. Специализация - performance-маркетинг.',
+  keywords:
+    'о компании rt agency, команда маркетологов, сертифицированные специалисты яндекс',
+  ogImage: 'https://rt-ads.ru/logo.svg',
+  link: [{ rel: 'canonical', href: 'https://rt-ads.ru/about' }],
   ogType: 'website',
   // Schema.org разметка для организации
   schema: {

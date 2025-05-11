@@ -6,6 +6,12 @@
 </template>
 
 <script setup>
+import { useMeta } from '@/composables/useMeta';
+
+useMeta({
+  title: '404 - Страница не найдена | RT-AGENCY',
+  robots: 'noindex, nofollow',
+});
 // No additional logic is needed for this component.
 </script>
 
