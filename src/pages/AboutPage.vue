@@ -346,12 +346,7 @@ useMeta({
         '@type': 'Person',
         name: 'Роман Лобов',
       },
-    ],
-    address: {
-      '@type': 'sasha.af.one@gmail.com',
-      addressLocality: 'Москва',
-      addressCountry: 'RU',
-    },
+    ]
   },
 });
 </script>
