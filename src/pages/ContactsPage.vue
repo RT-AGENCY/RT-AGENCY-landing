@@ -84,8 +84,10 @@
                   <h3 class="font-medium text-lg text-left">Телефон</h3>
                   <p class="text-gray-600">
                     <a
-                      href="tel:+79691639977"
                       class="hover:text-primary-600 transition-colors"
+                      href="https://t.me/RT_adAGENCY"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       >+7 (969) 163-99-77</a
                     >
                   </p>

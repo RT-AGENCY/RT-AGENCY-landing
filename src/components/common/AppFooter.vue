@@ -118,11 +118,13 @@
                   d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
                 />
               </svg>
-                <a
-                  href="tel:+79691639977"
-                  class="text-gray-400 hover:text-primary-600 transition-colors"
-                  >+7 (969) 163-99-77</a
-                >
+              <a
+                class="hover:text-primary-600 transition-colors text-gray-400"
+                href="https://t.me/RT_adAGENCY"
+                target="_blank"
+                rel="noopener noreferrer"
+                >+7 (969) 163-99-77</a
+              >
             </li>
 
             <li class="flex items-center">
