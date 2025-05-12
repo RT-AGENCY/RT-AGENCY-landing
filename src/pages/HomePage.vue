@@ -96,7 +96,7 @@ useMeta({
       'Performance-маркетинговое агентство, специализирующееся на контекстной и таргетированной рекламе, SEO и оптимизации конверсий.',
     logo: 'https://rt-ads.ru/logo.svg',
     url: 'https://rt-ads.ru',
-    email: 'sasha.af.one@gmail.com',
+    email: 'hello@rt-agency.ru',
     priceRange: '₽₽',
     address: {
       '@type': 'PostalAddress',

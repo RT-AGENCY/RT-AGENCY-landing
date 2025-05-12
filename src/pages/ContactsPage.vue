@@ -63,7 +63,7 @@
               </div>
 
               <!-- Телефон -->
-              <!-- <div class="flex items-start">
+              <div class="flex items-start">
                 <div class="flex-shrink-0 p-2 bg-primary-50 rounded-full mr-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -84,13 +84,13 @@
                   <h3 class="font-medium text-lg text-left">Телефон</h3>
                   <p class="text-gray-600">
                     <a
-                      href="tel:+79991234567"
+                      href="tel:+79691639977"
                       class="hover:text-primary-600 transition-colors"
-                      >+7 (999) 123-45-67</a
+                      >+7 (969) 163-99-77</a
                     >
                   </p>
                 </div>
-              </div> -->
+              </div>
 
               <!-- Email -->
               <div class="flex items-start">
@@ -114,9 +114,9 @@
                   <h3 class="font-medium text-lg text-left">Email</h3>
                   <p class="text-gray-600">
                     <a
-                      href="mailto:info@performance-agency.ru"
+                      href="mailto:hello@rt-agency.ru"
                       class="hover:text-primary-600 transition-colors"
-                      >sasha.af.one@gmail.com
+                      >hello@rt-agency.ru
                     </a>
                   </p>
                 </div>
@@ -268,7 +268,7 @@ const services = ref([
 useMeta({
   title: 'Контакты | Свяжитесь с RT-AGENCY',
   description:
-    'Получите бесплатную консультацию по маркетингу. Email: sasha.af.one@gmail.com. Офис в Москве.',
+    'Получите бесплатную консультацию по маркетингу. Email: hello@rt-agency.ru. Офис в Москве.',
   keywords:
     'контакты маркетингового агентства, консультация по рекламе, rt agency москва',
   ogImage: 'https://rt-ads.ru/logo.svg',
@@ -283,7 +283,7 @@ useMeta({
     mainEntity: {
       '@type': 'Organization',
       name: 'RT-AGENCY',
-      email: 'sasha.af.one@gmail.com',
+      email: 'hello@rt-agency.ru',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Москва',
@@ -292,7 +292,7 @@ useMeta({
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'customer service',
-        email: 'sasha.af.one@gmail.com',
+        email: 'hello@rt-agency.ru',
       },
     },
   },

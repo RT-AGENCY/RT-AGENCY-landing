@@ -13,6 +13,8 @@
       <input type="hidden" name="_subject" :value="`Новая заявка: ${title}`" />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_cc" value="hello@rt-agency.ru" />
+
 
       <!-- Перенаправление после отправки -->
       <input type="hidden" name="_next" value="https://rt-ads.ru" />
