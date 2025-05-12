@@ -20,7 +20,7 @@
             <div
               class="absolute inset-0 flex items-center justify-center text-gray-400"
             >
-              <img v-if="caseItem.img" :src="caseItem.img" alt="case image." class="case-image"/>
+              <img v-if="caseItem.img" :src="caseItem.img" alt="case image." class="case-image" loading="lazy"/>
               <svg
                 v-else
                 xmlns="http://www.w3.org/2000/svg"
