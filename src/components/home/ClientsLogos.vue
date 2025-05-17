@@ -18,8 +18,10 @@
             <img
               :src="client.logo"
               :alt="client.alt"
-              class="h-14 max-w-24"
+              class="h-14  max-w-24 object-contain"
               loading="lazy"
+              height="56"
+              width="96"
             />
           </div>
         </div>
