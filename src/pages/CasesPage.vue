@@ -380,7 +380,7 @@
 import { ref, computed, onMounted } from 'vue';
 import { useMeta } from '@/composables/useMeta';
 
-import nikeImg from '@/assets/images/cases/nike.jpg';
+import nikeImg from '@/assets/images/cases/nike.webp';
 import evermodImg from '@/assets/images/cases/Evermod.webp';
 import mszImg from '@/assets/images/cases/msz.webp';
 import gatchinaImg from '@/assets/images/cases/gatchina.webp';
@@ -723,7 +723,7 @@ useMeta({
         '@type': 'Case',
         headline: 'Мультиканальная кампания Nike',
         description: '+62% регистраций, ROI 410%',
-        image: 'https://rt-ads.ru/images/cases/nike.jpg',
+        image: 'https://rt-ads.ru/images/cases/nike.webp',
         author: {
           '@type': 'Organization',
           name: 'RT-AGENCY',

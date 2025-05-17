@@ -114,7 +114,7 @@
 
 <script setup>
 // Примеры кейсов
-import nikeImg from '@/assets/images/cases/nike.jpg'
+import nikeImg from '@/assets/images/cases/nike.webp'
 import evermodImg from '@/assets/images/cases/Evermod.webp'
 import mszImg from '@/assets/images/cases/msz.webp'
 
