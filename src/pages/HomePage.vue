@@ -79,9 +79,9 @@ useMeta({
     { rel: 'alternate', href: 'https://rt-ads.ru/', hreflang: 'ru' },
     { rel: 'canonical', href: 'https://rt-ads.ru/' },
   ],
-  title: 'Главная | RT-AGENCY',
+  title: 'RT-AGENCY | Performance-маркетинг с гарантией результата',
   description:
-    'Performance-маркетинговое агентство, специализирующееся на контекстной и таргетированной рекламе, SEO и оптимизации конверсий.',
+    'Увеличиваем продажи с помощью контекстной и таргетированной рекламы с ROI до 420%. 150+ клиентов, 12 лет опыта. Москва и вся Россия.',
   ogType: 'website',
   ogImage: 'https://rt-ads.ru/logo.svg',
   ogUrl: 'https://rt-ads.ru/',

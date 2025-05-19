@@ -15,11 +15,17 @@
       >
         <div v-for="(client, index) in clients" :key="index" class="mx-8">
           <div>
-            <img :src="client.logo" :alt="client.alt" class="h-14 max-w-24" />
+            <img
+              :src="client.logo"
+              :alt="client.alt"
+              class="h-14  max-w-24 object-contain"
+              loading="lazy"
+              height="56"
+              width="96"
+            />
           </div>
         </div>
       </Vue3Marquee>
-
     </div>
   </section>
 </template>

@@ -380,7 +380,7 @@
 import { ref, computed, onMounted } from 'vue';
 import { useMeta } from '@/composables/useMeta';
 
-import nikeImg from '@/assets/images/cases/nike.jpg';
+import nikeImg from '@/assets/images/cases/nike.webp';
 import evermodImg from '@/assets/images/cases/Evermod.webp';
 import mszImg from '@/assets/images/cases/msz.webp';
 import gatchinaImg from '@/assets/images/cases/gatchina.webp';
@@ -703,9 +703,9 @@ const loadMoreCases = () => {
 
 // Мета-теги для SEO
 useMeta({
-  title: 'Кейсы | Результаты работы RT-AGENCY',
+  title: '9 Кейсов с ROI до 420% | Результаты работы RT-AGENCY',
   description:
-    'Изучите 9 успешных кейсов: от Nike до недвижимости. Рост ROI до 420%, снижение CPL на 35%.',
+    'Реальные результаты продвижения Nike, Сбербанк, Evermod: рост ROI до 420%, снижение CPL на 35%, увеличение конверсии в 2 раза. Кейсы с цифрами.',
   keywords:
     'кейсы маркетингового агентства, успешные примеры рекламы, результаты контекстной рекламы',
   ogImage: 'https://rt-ads.ru/logo.svg',
@@ -723,7 +723,7 @@ useMeta({
         '@type': 'Case',
         headline: 'Мультиканальная кампания Nike',
         description: '+62% регистраций, ROI 410%',
-        image: 'https://rt-ads.ru/images/cases/nike.jpg',
+        image: 'https://rt-ads.ru/images/cases/nike.webp',
         author: {
           '@type': 'Organization',
           name: 'RT-AGENCY',

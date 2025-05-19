@@ -235,7 +235,7 @@
             <div class="p-6">
               <h3 class="text-xl font-bold">Татьяна Громова</h3>
               <p class="text-primary-600 mb-4">
-                Performance Director / Head of Performance Marketing
+                CEO / Performance Director
               </p>
               <p class="text-gray-600 mb-4">
                 Руководитель отдела эффективной рекламы с 8+ летним опытом
