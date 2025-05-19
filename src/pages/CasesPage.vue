@@ -49,6 +49,7 @@
           <div class="flex-shrink-0">
             <select
               v-model="selectedService"
+              aria-label="Все услуги"
               class="case-input w-full md:w-auto px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             >
               <option value="">Все услуги</option>
@@ -66,6 +67,7 @@
           <div class="flex-shrink-0">
             <select
               v-model="selectedIndustry"
+              aria-label="Все ниши"
               class="case-input w-full md:w-auto px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             >
               <option value="">Все ниши</option>
@@ -83,6 +85,7 @@
           <div class="flex-shrink-0">
             <select
               v-model="sortBy"
+              aria-label="Сортировка"
               class="case-input w-full md:w-auto px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             >
               <option value="date">По дате (новые)</option>
@@ -191,7 +194,7 @@
           class="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           <div
-            v-for="caseItem in filteredCases"
+            v-for="(caseItem, index) in filteredCases"
             :key="caseItem.id"
             class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col"
           >
@@ -202,6 +205,8 @@
                   :src="caseItem.image"
                   :alt="caseItem.title"
                   class="w-full h-full object-cover"
+                  :fetchpriority="index < 2 ? 'high' : 'auto'"
+                  :loading="index < 2 ? 'eager' : 'lazy'"
                 />
               </div>
               <div
@@ -352,9 +357,9 @@
         <div
           class="bg-white shadow-xl rounded-xl p-8 md:p-12 text-center max-w-4xl mx-auto"
         >
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          <h4 class="text-3xl md:text-4xl font-bold mb-4">
             Хотите достичь таких же результатов?
-          </h2>
+          </h4>
           <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Свяжитесь с нами для обсуждения вашего проекта. Мы проанализируем
             ваш бизнес и предложим эффективную стратегию продвижения.
