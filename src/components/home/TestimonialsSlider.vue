@@ -28,10 +28,8 @@
             v-for="(testimonial, index) in testimonials"
             :key="index"
           >
-            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
-              <div
-                class="flex flex-row items-start md:items-center gap-4 mb-4"
-              >
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
+              <div class="flex flex-row items-start md:items-center gap-4 mb-4">
                 <div class="flex-shrink-0">
                   <!-- Аватар клиента -->
                   <div
@@ -47,7 +45,7 @@
                   </p>
                 </div>
               </div>
-                <!-- Рейтинг -->
+              <!-- Рейтинг -->
 
               <!-- <div class="mb-4">
                 <div class="flex">

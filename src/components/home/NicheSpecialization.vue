@@ -16,7 +16,7 @@
         <div
           v-for="(industry, index) in industries"
           :key="index"
-          class="bg-gray-50 rounded-lg p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-2"
+          class="bg-gray-50 rounded-lg p-2.5 sm:p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-2"
         >
           <div class="flex items-center mb-4">
             <div class="bg-primary-100 text-primary-600 p-3 rounded-full mr-4">
