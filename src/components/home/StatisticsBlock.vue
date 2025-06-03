@@ -2,7 +2,7 @@
   <section class="py-16 bg-primary-900 text-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Почему нам доверяют</h2>
+        <h2 class="text-2xl md:text-4xl font-bold mb-4">Почему нам доверяют</h2>
         <p class="text-lg text-gray-300 max-w-3xl mx-auto">
           Наши результаты говорят сами за себя
         </p>

@@ -2,12 +2,12 @@
   <section class="py-16 bg-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Наша экспертиза</h2>
-        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-4xl font-bold mb-4">Наша экспертиза</h2>
+        <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
           RT Agency — маркетинговое агентство полного цикла, предоставляющее
           эффективные digital-решения для бизнеса в любой нише
         </p>
-        <p class="text-primary-600 font-medium text-xl mt-4">
+        <p class="text-primary-600 font-medium text-lg sm:text-xl mt-4">
           Мы создаём результат там, где другие просто создают контент
         </p>
       </div>
