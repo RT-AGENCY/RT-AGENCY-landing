@@ -36,7 +36,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['Montserrat', 'sans-serif'],
+        heading: ['Inter', 'system-ui', 'sans-serif'],
       },
       spacing: {
         '128': '32rem',
