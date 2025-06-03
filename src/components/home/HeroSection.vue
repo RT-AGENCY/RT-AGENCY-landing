@@ -44,7 +44,11 @@
         <div
           class="absolute bottom-20 right-40 bg-white/10 p-4 rounded-lg animate-pulse delay-225"
         >
-          <img src="@/assets/images/icons/vk.svg" alt="VK" class="w-12 h-12 opacity-80" />
+          <img
+            src="@/assets/images/icons/vk.svg"
+            alt="VK"
+            class="w-12 h-12 opacity-80"
+          />
         </div>
       </div>
     </div>
@@ -54,13 +58,13 @@
     >
       <div class="max-w-3xl">
         <!-- Заголовок с УТП -->
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
           Увеличиваем прибыль <br class="hidden md:block" />
           <span class="text-primary-300">с помощью маркетинга</span>
         </h1>
 
         <!-- Подзаголовок -->
-        <p class="text-xl md:text-2xl mb-8 text-gray-200">
+        <p class="text-lg md:text-2xl mb-8 text-gray-200">
           Наше агентство специализируется на performance-маркетинге: рекламе с
           оплатой за результат, а не за клики
         </p>

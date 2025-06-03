@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Заголовок секции -->
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Наши услуги</h2>
+        <h2 class="text-2xl md:text-4xl font-bold mb-4">Наши услуги</h2>
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">
           Помогаем бизнесу увеличивать продажи с помощью комплексного
           digital-маркетинга
