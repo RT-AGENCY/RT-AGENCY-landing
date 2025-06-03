@@ -73,13 +73,13 @@
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <router-link
             to="/contacts"
-            class="btn bg-white text-primary-700 hover:bg-gray-100 font-bold"
+            class="btn bg-white text-primary-700 hover:bg-gray-100 font-bold critical-text"
           >
             Запустить рекламу
           </router-link>
           <router-link
             to="/cases"
-            class="btn btn-outline border-white text-white hover:text-white hover:bg-white/10"
+            class="btn btn-outline border-white text-white hover:text-white hover:bg-white/10 critical-text"
           >
             Посмотреть кейсы
           </router-link>
