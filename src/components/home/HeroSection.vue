@@ -64,7 +64,7 @@
         </h1>
 
         <!-- Подзаголовок -->
-        <p class="text-lg md:text-2xl mb-8 text-gray-200">
+        <p class="text-lg md:text-2xl mb-8 text-gray-200 critical-text">
           Наше агентство специализируется на performance-маркетинге: рекламе с
           оплатой за результат, а не за клики
         </p>
@@ -131,5 +131,8 @@
 
 .animation-delay-4000 {
   animation-delay: 4s;
+}
+.critical-text {
+  font-family: system-ui, -apple-system, sans-serif;
 }
 </style>
