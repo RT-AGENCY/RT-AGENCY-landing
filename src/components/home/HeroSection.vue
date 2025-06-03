@@ -64,7 +64,7 @@
         </h1>
 
         <!-- Подзаголовок -->
-        <p class="text-lg md:text-2xl mb-8 text-gray-200">
+        <p class="text-lg md:text-2xl mb-8 text-gray-200 critical-text">
           Наше агентство специализируется на performance-маркетинге: рекламе с
           оплатой за результат, а не за клики
         </p>
@@ -73,13 +73,13 @@
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <router-link
             to="/contacts"
-            class="btn bg-white text-primary-700 hover:bg-gray-100 font-bold"
+            class="btn bg-white text-primary-700 hover:bg-gray-100 font-bold critical-text"
           >
             Запустить рекламу
           </router-link>
           <router-link
             to="/cases"
-            class="btn btn-outline border-white text-white hover:text-white hover:bg-white/10"
+            class="btn btn-outline border-white text-white hover:text-white hover:bg-white/10 critical-text"
           >
             Посмотреть кейсы
           </router-link>
@@ -131,5 +131,8 @@
 
 .animation-delay-4000 {
   animation-delay: 4s;
+}
+.critical-text {
+  font-family: system-ui, -apple-system, sans-serif;
 }
 </style>
