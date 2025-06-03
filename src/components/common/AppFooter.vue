@@ -120,9 +120,7 @@
               </svg>
               <a
                 class="hover:text-primary-600 transition-colors text-gray-400"
-                href="https://t.me/RT_adAGENCY"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="tel:+79691639977"
                 >+7 (969) 163-99-77</a
               >
             </li>
