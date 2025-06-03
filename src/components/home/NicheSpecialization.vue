@@ -16,13 +16,13 @@
         <div
           v-for="(industry, index) in industries"
           :key="index"
-          class="bg-gray-50 rounded-lg p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-2"
+          class="bg-gray-50 rounded-lg p-2.5 sm:p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-2"
         >
           <div class="flex items-center mb-4">
             <div class="bg-primary-100 text-primary-600 p-3 rounded-full mr-4">
               <component :is="industry.icon" class="h-6 w-6" />
             </div>
-            <h3 class="text-lg font-bold">{{ industry.name }}</h3>
+            <h3 class="text-base sm:text-lg font-bold text-left">{{ industry.name }}</h3>
           </div>
           <p class="text-gray-600">{{ industry.description }}</p>
         </div>

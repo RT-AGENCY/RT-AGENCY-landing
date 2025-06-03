@@ -12,12 +12,12 @@
     <section class="py-16 bg-primary-50">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          class="bg-white shadow-xl rounded-xl p-8 md:p-12 text-center max-w-4xl mx-auto"
+          class="bg-white shadow-xl rounded-xl p-4 sm:p-8 md:p-12 text-center max-w-4xl mx-auto"
         >
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          <h2 class="text-xl sm:text-3xl md:text-4xl font-bold mb-4">
             Готовы увеличить продажи?
           </h2>
-          <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p class="text-base sm:text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Свяжитесь с нами для бесплатной консультации. Мы проанализируем ваш
             бизнес и предложим стратегию роста.
           </p>
@@ -110,7 +110,7 @@ useMeta({
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
       opens: '09:00',
       closes: '18:00',
-    }
+    },
   },
 });
 

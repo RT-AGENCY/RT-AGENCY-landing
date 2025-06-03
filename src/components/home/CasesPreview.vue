@@ -20,7 +20,13 @@
             <div
               class="absolute inset-0 flex items-center justify-center text-gray-400"
             >
-              <img v-if="caseItem.img" :src="caseItem.img" alt="case image." class="case-image" loading="lazy"/>
+              <img
+                v-if="caseItem.img"
+                :src="caseItem.img"
+                alt="case image."
+                class="case-image"
+                loading="lazy"
+              />
               <svg
                 v-else
                 xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +45,7 @@
             </div>
           </div>
 
-          <div class="p-6 text-start flex-1 flex flex-col">
+          <div class="p-4 sm:p-6 text-start flex-1 flex flex-col">
             <!-- Категория кейса -->
             <div class="mb-2">
               <span
@@ -114,10 +120,9 @@
 
 <script setup>
 // Примеры кейсов
-import nikeImg from '@/assets/images/cases/nike.webp'
-import evermodImg from '@/assets/images/cases/Evermod.webp'
-import mszImg from '@/assets/images/cases/msz.webp'
-
+import nikeImg from '@/assets/images/cases/nike.webp';
+import evermodImg from '@/assets/images/cases/Evermod.webp';
+import mszImg from '@/assets/images/cases/msz.webp';
 
 const cases = [
   {
@@ -187,5 +192,4 @@ const getTagClass = (category) => {
   max-height: 100%;
   width: 100%;
 }
-
 </style>
