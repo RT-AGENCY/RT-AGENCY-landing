@@ -1,6 +1,6 @@
 <template>
-  <header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+  <header class="bg-white shadow-sm fixed md:sticky w-full top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 header-shadow">
       <div class="flex justify-between items-center py-4 gap-2.5">
         <!-- Логотип -->
         <AppLogo />
@@ -226,3 +226,11 @@ if (typeof window !== 'undefined') {
   });
 }
 </script>
+
+<style scoped>
+@media (max-width: 768px) {
+  .header-shadow {
+    box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.17);
+  }
+}
+</style>
