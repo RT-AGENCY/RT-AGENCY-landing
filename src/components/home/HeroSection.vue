@@ -54,7 +54,7 @@
     </div>
 
     <div
-      class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative z-10"
+      class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-28 relative z-10"
     >
       <div class="max-w-3xl">
         <!-- Заголовок с УТП -->
@@ -102,7 +102,7 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    min-height: 80vh;
+    margin-top: 76px;
   }
 }
 
