@@ -1,7 +1,7 @@
 <template>
   <div class="contacts-page">
     <!-- Шапка страницы -->
-    <section class="bg-primary-700 text-white py-12 md:py-20">
+    <section class="bg-primary-700 text-white mt-16 py-10 md:mt-0 md:py-20">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl text-left">
           <h1 class="text-3xl md:text-4xl font-bold mb-4">Свяжитесь с нами</h1>
@@ -14,7 +14,7 @@
     </section>
 
     <!-- Основной контент -->
-    <section class="py-12 md:py-16 bg-white">
+    <section class="py-12 md:py-16 bg-white" id="application">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <!-- Форма обратной связи (вторая форма) -->

@@ -30,7 +30,7 @@
         <div class="flex md:hidden">
           <button
             @click="isMenuOpen = !isMenuOpen"
-            class="text-gray-700 hover:text-primary-600 focus:outline-none"
+            class="text-gray-700 hover:text-primary-600 focus:outline-none bg-transparent"
             aria-label="Открыть меню"
           >
             <svg
@@ -113,7 +113,7 @@
             </div>
           </div>
           <router-link
-            to="/contacts"
+            to="/contacts#application"
             class="btn btn-primary hover:text-white p-2 lg:p-4 text-sm lg:text-base"
           >
             Оставить заявку
@@ -179,7 +179,7 @@
         </router-link>
 
         <router-link
-          to="/contacts"
+          to="/contacts#application"
           class="btn btn-primary w-full text-center mt-4"
           @click="isMenuOpen = false"
         >
