@@ -1,7 +1,7 @@
 <template>
   <div class="about-page">
     <!-- Hero Section -->
-    <section class="bg-primary-700 text-white py-12 md:py-20">
+    <section class="bg-primary-700 text-white pt-20 pb-8 md:py-20">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl text-start">
           <h1 class="text-3xl md:text-4xl font-bold mb-4">О компании</h1>

@@ -113,7 +113,7 @@
             </div>
           </div>
           <router-link
-            to="/contacts"
+            to="/contacts#application"
             class="btn btn-primary hover:text-white p-2 lg:p-4 text-sm lg:text-base"
           >
             Оставить заявку
@@ -179,7 +179,7 @@
         </router-link>
 
         <router-link
-          to="/contacts"
+          to="/contacts#application"
           class="btn btn-primary w-full text-center mt-4"
           @click="isMenuOpen = false"
         >
