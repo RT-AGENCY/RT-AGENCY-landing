@@ -84,7 +84,7 @@
                   <h3 class="font-medium text-lg text-left">Телефон</h3>
                   <p class="text-gray-600">
                     <a
-                      class="hover:text-primary-600 transition-colors"
+                      class="hover:text-primary-400 transition-colors"
                       href="tel:+79691639977"
                       >+7 (969) 163-99-77</a
                     >
@@ -112,7 +112,7 @@
                       href="https://t.me/RT_adAGENCY"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="hover:text-primary-600 transition-colors"
+                      class="hover:text-primary-400 transition-colors"
                       >@RT_adAGENCY</a
                     >
                   </p>
@@ -140,7 +140,7 @@
                       href="https://api.whatsapp.com/send/?phone=79691639977&text=Добрый+день%21+Хотим+бесплатную+консультацию%21&type=phone_number&app_absent=0"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="hover:text-primary-600 transition-colors"
+                      class="hover:text-primary-400 transition-colors"
                       >Написать в WhatsApp</a
                     >
                   </p>
@@ -170,7 +170,7 @@
                   <p class="text-gray-600">
                     <a
                       href="mailto:hello@rt-agency.ru"
-                      class="hover:text-primary-600 transition-colors"
+                      class="hover:text-primary-400 transition-colors"
                       >hello@rt-agency.ru
                     </a>
                   </p>
@@ -198,7 +198,7 @@
                 <div>
                   <h3 class="font-medium text-lg text-left">Мы в соцсетях</h3>
                   <div class="flex space-x-4 mt-2">
-                    <a href="#" class="text-gray-600 hover:text-primary-600">
+                    <a href="#" class="text-gray-600 hover:text-primary-400">
                       <svg
                         class="h-6 w-6"
                         fill="currentColor"
@@ -209,7 +209,7 @@
                         />
                       </svg>
                     </a>
-                    <a href="#" class="text-gray-600 hover:text-primary-600">
+                    <a href="#" class="text-gray-600 hover:text-primary-400">
                       <svg
                         class="h-6 w-6"
                         fill="currentColor"
@@ -220,7 +220,7 @@
                         />
                       </svg>
                     </a>
-                    <a href="#" class="text-gray-600 hover:text-primary-600">
+                    <a href="#" class="text-gray-600 hover:text-primary-400">
                       <svg
                         class="h-6 w-6"
                         fill="currentColor"
