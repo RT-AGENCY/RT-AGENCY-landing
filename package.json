@@ -5,14 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build:css": "tailwindcss -i ./src/style.css -o ./src/tailwind.css --watch",
-    "build": "vite build",
+    "build:css": "tailwindcss -i ./src/style.css -o ./src/tailwind.css",
+    "dev:css": "tailwindcss -i ./src/style.css -o ./src/tailwind.css --watch",
+    "prebuild": "node scripts/fetch-cases.js",
+    "build": "npm run build:css && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "@vueuse/core": "^13.1.0",
     "@vueuse/head": "^2.0.0",
+    "airtable": "^0.12.2",
     "axios": "^1.9.0",
+    "dotenv": "^16.5.0",
     "pinia": "^3.0.2",
     "swiper": "^11.2.6",
     "vee-validate": "^4.15.0",

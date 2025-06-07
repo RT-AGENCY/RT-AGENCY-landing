@@ -384,6 +384,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import { useMeta } from '@/composables/useMeta';
+import { getCases } from '@/services/airtable'
 
 import nikeImg from '@/assets/images/cases/nike.webp';
 import evermodImg from '@/assets/images/cases/Evermod.webp';
@@ -400,6 +401,13 @@ const searchQuery = ref('');
 const selectedService = ref('');
 const selectedIndustry = ref('');
 const sortBy = ref('date');
+
+const cases = ref([])
+
+onMounted(async () => {
+  cases.value = await getCases()
+  console.log('cases', cases);
+})
 
 // Опции для фильтров
 const services = [
