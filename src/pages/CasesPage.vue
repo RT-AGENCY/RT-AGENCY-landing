@@ -394,6 +394,10 @@ import holtsovImg from '@/assets/images/cases/holtsov.webp';
 import prefabImg from '@/assets/images/cases/prefab.webp';
 import gkb23Img from '@/assets/images/cases/gkb-23.webp';
 import gkb24Img from '@/assets/images/cases/gkb-24.webp';
+import techImg from '@/assets/images/cases/tech-nikol.webp';
+import rostermImg from '@/assets/images/cases/rosterm.webp';
+import siriusImg from '@/assets/images/cases/sirius.webp';
+import skillboxImg from '@/assets/images/cases/skillbox.webp';
 
 // Реактивные данные для фильтров
 const searchQuery = ref('');
@@ -417,11 +421,11 @@ const industries = [
   { value: 'healthcare', label: 'Медицина и фармацевтика' },
   { value: 'education', label: 'Онлайн-образование' },
   { value: 'manufacturing', label: 'Производство' },
-  { value: 'finance', label: 'Финансы и банки' },
+  // { value: 'finance', label: 'Финансы и банки' },
   { value: 'retail', label: 'Ритейл и технологии' },
-  { value: 'b2b', label: 'B2B услуги' },
-  { value: 'travel', label: 'Туризм и путешествия' },
-  { value: 'automotive', label: 'Автомобильный бизнес' },
+  // { value: 'b2b', label: 'B2B услуги' },
+  // { value: 'travel', label: 'Туризм и путешествия' },
+  // { value: 'automotive', label: 'Автомобильный бизнес' },
 ];
 
 // Данные кейсов (в реальном проекте это будет API)
@@ -621,6 +625,94 @@ const allCases = ref([
     date: '2024-10-25',
     roi: 275,
     revenue: '+44%',
+  },
+  {
+    id: 10,
+    slug: 'technonikol-roofing-materials',
+    title:
+      'Продвижение кровельных материалов ТехноНИКОЛЬ через мультиканальную стратегию',
+    client: 'ТехноНИКОЛЬ',
+    description:
+      'Комплексное продвижение кровельных и теплоизоляционных материалов через Яндекс.Директ и VK Ads для привлечения частных клиентов и монтажников по всей России',
+    services: ['context-ads', 'targeted-ads', 'web-analytics', 'complex'],
+    industry: 'manufacturing',
+    image: techImg,
+    keyResults: [
+      { metric: 'Заявки за 60 дней', value: '1850+' },
+      { metric: 'CPL', value: '410₽' },
+      { metric: 'Конверсия ЯД', value: '14%' },
+      { metric: 'Конверсия VK', value: '28%' },
+    ],
+    date: '2024-09-20',
+    roi: 285,
+    revenue: '+245%',
+  },
+  {
+    id: 11,
+    slug: 'rosterm-engineering-systems',
+    title:
+      'Продвижение инженерных систем Ростерм через мультиканальную стратегию',
+    client: 'Ростерм',
+    description:
+      'Комплексное продвижение пластиковых труб, фитингов и запорной арматуры через Яндекс.Директ и VK Ads для привлечения монтажников, дистрибьюторов и оптовых клиентов по всей России',
+    services: ['context-ads', 'targeted-ads', 'web-analytics', 'complex'],
+    industry: 'manufacturing',
+    image: rostermImg,
+    keyResults: [
+      { metric: 'Лиды за 45 дней', value: '1320+' },
+      { metric: 'CPL', value: '440₽' },
+      { metric: 'Конверсия в лид', value: '12-16%' },
+      { metric: 'CTR в РСЯ', value: '5.4%' },
+    ],
+    date: '2024-08-10',
+    roi: 270,
+    revenue: '+220%',
+  },
+  {
+    id: 12,
+    slug: 'sirius-outdoor-boilers',
+    title: 'Продвижение энергонезависимых наружных котлов СИРИУС',
+    client: 'СИРИУС',
+    description:
+      'Привлечение заявок на энергонезависимые газовые котлы через Яндекс.Директ с акцентом на регионы с холодным климатом и нестабильным электроснабжением',
+    services: ['context-ads', 'web-analytics'],
+    industry: 'manufacturing',
+    image: siriusImg,
+    keyResults: [
+      { metric: 'Лиды за 30 дней', value: '870+' },
+      { metric: 'CPL', value: '2500₽' },
+      { metric: 'Конверсия', value: '17%' },
+      { metric: 'CTR в РСЯ', value: '6.1%' },
+    ],
+    date: '2024-07-05',
+    roi: 240,
+    revenue: '+185%',
+  },
+  {
+    id: 13,
+    slug: 'skillbox-online-courses',
+    title: 'Продвижение онлайн-курсов Skillbox через мультиканальную стратегию',
+    client: 'Skillbox',
+    description:
+      'Комплексное продвижение онлайн-курсов по дизайну, программированию, маркетингу и аналитике через Яндекс.Директ и VK Ads для привлечения студентов по всей России',
+    services: [
+      'context-ads',
+      'targeted-ads',
+      'web-analytics',
+      'cro',
+      'complex',
+    ],
+    industry: 'education',
+    image: skillboxImg,
+    keyResults: [
+      { metric: 'Лиды за 45 дней', value: '2300+' },
+      { metric: 'CPL', value: '1100₽' },
+      { metric: 'Конверсия', value: '13-17%' },
+      { metric: 'CTR на поиске', value: '7.2%' },
+    ],
+    date: '2024-06-15',
+    roi: 310,
+    revenue: '+280%',
   },
 ]);
 
