@@ -103,7 +103,7 @@
           >
             {{ getServiceLabel(selectedService) }}
             <button
-              @click="selectedService = ''"
+              @click="clearServiceFilter"
               class="ml-2 text-primary-600 hover:text-primary-800"
             >
               <svg
@@ -127,7 +127,7 @@
           >
             {{ getIndustryLabel(selectedIndustry) }}
             <button
-              @click="selectedIndustry = ''"
+              @click="clearIndustryFilter"
               class="ml-2 text-primary-600 hover:text-primary-800"
             >
               <svg
@@ -151,7 +151,7 @@
           >
             "{{ searchQuery }}"
             <button
-              @click="searchQuery = ''"
+              @click="clearSearchFilter"
               class="ml-2 text-primary-600 hover:text-primary-800"
             >
               <svg
@@ -170,7 +170,7 @@
             </button>
           </span>
           <button
-            @click="clearFilters"
+            @click="clearAllFilters"
             class="text-sm text-primary-600 hover:text-primary-800 ml-2"
           >
             Очистить все
@@ -286,26 +286,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- CTA Button -->
-              <!-- <router-link
-                :to="`/cases/${caseItem.slug}`"
-                class="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 mt-auto"
-              >
-                Подробнее о кейсе
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 ml-1"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </router-link> -->
             </div>
           </div>
         </div>
@@ -332,20 +312,8 @@
           <p class="text-gray-500 mb-4">
             Попробуйте изменить критерии поиска или очистить фильтры
           </p>
-          <button @click="clearFilters" class="btn btn-primary">
+          <button @click="clearAllFilters" class="btn btn-primary">
             Очистить фильтры
-          </button>
-        </div>
-
-        <!-- Load More / Pagination placeholder -->
-        <div v-if="filteredCases.length > 0" class="text-center mt-12">
-          <!-- Вы можете добавить пагинацию или кнопку "Загрузить еще" -->
-          <button
-            v-if="showLoadMore"
-            @click="loadMoreCases"
-            class="btn btn-primary"
-          >
-            Загрузить ещё кейсы
           </button>
         </div>
       </div>
@@ -382,8 +350,13 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, watch, nextTick } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import { useMeta } from '@/composables/useMeta';
+
+// Роутер и маршрут
+const route = useRoute();
+const router = useRouter();
 
 import nikeImg from '@/assets/images/cases/nike.webp';
 import evermodImg from '@/assets/images/cases/Evermod.webp';
@@ -405,6 +378,9 @@ const selectedService = ref('');
 const selectedIndustry = ref('');
 const sortBy = ref('date');
 
+// Флаг для предотвращения зацикливания при инициализации
+const isInitialized = ref(false);
+
 // Опции для фильтров
 const services = [
   { value: 'context-ads', label: 'Контекстная реклама' },
@@ -421,14 +397,9 @@ const industries = [
   { value: 'healthcare', label: 'Медицина и фармацевтика' },
   { value: 'education', label: 'Онлайн-образование' },
   { value: 'manufacturing', label: 'Производство' },
-  // { value: 'finance', label: 'Финансы и банки' },
   { value: 'retail', label: 'Ритейл и технологии' },
-  // { value: 'b2b', label: 'B2B услуги' },
-  // { value: 'travel', label: 'Туризм и путешествия' },
-  // { value: 'automotive', label: 'Автомобильный бизнес' },
 ];
 
-// Данные кейсов (в реальном проекте это будет API)
 const allCases = ref([
   {
     id: 1,
@@ -450,8 +421,6 @@ const allCases = ref([
     roi: 410,
     revenue: '+62%',
   },
-
-  // 2. GC Riviera - Коттеджные поселки
   {
     id: 2,
     slug: 'gc-riviera-cottages',
@@ -472,8 +441,32 @@ const allCases = ref([
     roi: 290,
     revenue: '+180%',
   },
-
-  // 3. Holtsov House - Модульные дома
+  {
+    id: 13,
+    slug: 'skillbox-online-courses',
+    title: 'Продвижение онлайн-курсов Skillbox через мультиканальную стратегию',
+    client: 'Skillbox',
+    description:
+      'Комплексное продвижение онлайн-курсов по дизайну, программированию, маркетингу и аналитике через Яндекс.Директ и VK Ads для привлечения студентов по всей России',
+    services: [
+      'context-ads',
+      'targeted-ads',
+      'web-analytics',
+      'cro',
+      'complex',
+    ],
+    industry: 'education',
+    image: skillboxImg,
+    keyResults: [
+      { metric: 'Лиды за 45 дней', value: '2300+' },
+      { metric: 'CPL', value: '1100₽' },
+      { metric: 'Конверсия', value: '13-17%' },
+      { metric: 'CTR на поиске', value: '7.2%' },
+    ],
+    date: '2024-06-15',
+    roi: 310,
+    revenue: '+280%',
+  },
   {
     id: 3,
     slug: 'holtsov-house-modular',
@@ -688,33 +681,43 @@ const allCases = ref([
     roi: 240,
     revenue: '+185%',
   },
-  {
-    id: 13,
-    slug: 'skillbox-online-courses',
-    title: 'Продвижение онлайн-курсов Skillbox через мультиканальную стратегию',
-    client: 'Skillbox',
-    description:
-      'Комплексное продвижение онлайн-курсов по дизайну, программированию, маркетингу и аналитике через Яндекс.Директ и VK Ads для привлечения студентов по всей России',
-    services: [
-      'context-ads',
-      'targeted-ads',
-      'web-analytics',
-      'cro',
-      'complex',
-    ],
-    industry: 'education',
-    image: skillboxImg,
-    keyResults: [
-      { metric: 'Лиды за 45 дней', value: '2300+' },
-      { metric: 'CPL', value: '1100₽' },
-      { metric: 'Конверсия', value: '13-17%' },
-      { metric: 'CTR на поиске', value: '7.2%' },
-    ],
-    date: '2024-06-15',
-    roi: 310,
-    revenue: '+280%',
-  },
 ]);
+
+// Функции для обновления URL
+const updateURL = () => {
+  if (!isInitialized.value) return;
+
+  const query = {};
+
+  if (searchQuery.value) query.search = searchQuery.value;
+  if (selectedService.value) query.service = selectedService.value;
+  if (selectedIndustry.value) query.industry = selectedIndustry.value;
+  if (sortBy.value !== 'date') query.sort = sortBy.value;
+
+  // Обновляем URL без перезагрузки страницы
+  router.replace({ query });
+};
+
+// Функция для инициализации фильтров из URL
+const initializeFromURL = () => {
+  const query = route.query;
+
+  searchQuery.value = query.search || '';
+  selectedService.value = query.service || '';
+  selectedIndustry.value = query.industry || '';
+  sortBy.value = query.sort || 'date';
+
+  // Устанавливаем флаг после инициализации
+  nextTick(() => {
+    isInitialized.value = true;
+  });
+};
+
+// Watchers для обновления URL при изменении фильтров
+watch(searchQuery, updateURL);
+watch(selectedService, updateURL);
+watch(selectedIndustry, updateURL);
+watch(sortBy, updateURL);
 
 // Computed свойства
 const filteredCases = computed(() => {
@@ -765,10 +768,23 @@ const hasActiveFilters = computed(() => {
   return searchQuery.value || selectedService.value || selectedIndustry.value;
 });
 
-// Методы
-const clearFilters = () => {
+// Методы для очистки фильтров
+const clearAllFilters = () => {
   searchQuery.value = '';
   selectedService.value = '';
+  selectedIndustry.value = '';
+  sortBy.value = 'date';
+};
+
+const clearSearchFilter = () => {
+  searchQuery.value = '';
+};
+
+const clearServiceFilter = () => {
+  selectedService.value = '';
+};
+
+const clearIndustryFilter = () => {
   selectedIndustry.value = '';
 };
 
@@ -789,13 +805,6 @@ const getResultColor = (value) => {
     return 'text-red-600';
   }
   return 'text-gray-900';
-};
-
-// Заглушка для "Загрузить больше"
-const showLoadMore = ref(false);
-const loadMoreCases = () => {
-  // Логика для загрузки дополнительных кейсов
-  console.log('Load more cases...');
 };
 
 // Мета-теги для SEO
@@ -830,11 +839,40 @@ useMeta({
   },
 });
 
-// Загрузка данных при монтировании
+// Инициализация при монтировании
 onMounted(() => {
-  // Здесь можно добавить загрузку кейсов из API
-  // loadCases();
+  initializeFromURL();
 });
+
+// Отслеживание изменений в route для случаев программной навигации
+watch(
+  () => route.query,
+  (newQuery) => {
+    if (isInitialized.value) {
+      // Обновляем фильтры только если query изменился извне
+      const currentQuery = {
+        search: searchQuery.value || undefined,
+        service: selectedService.value || undefined,
+        industry: selectedIndustry.value || undefined,
+        sort: sortBy.value !== 'date' ? sortBy.value : undefined,
+      };
+
+      // Убираем undefined значения для сравнения
+      Object.keys(currentQuery).forEach(
+        (key) => currentQuery[key] === undefined && delete currentQuery[key]
+      );
+
+      // Сравниваем объекты
+      const queryChanged =
+        JSON.stringify(currentQuery) !== JSON.stringify(newQuery);
+
+      if (queryChanged) {
+        isInitialized.value = false;
+        initializeFromURL();
+      }
+    }
+  }
+);
 </script>
 
 <style scoped>
