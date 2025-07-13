@@ -11,7 +11,6 @@ const app = createApp(App)
 // Импорт основных стилей
 const loadStyles = async () => {
   await import('./assets/styles/main.css')
-  await import('./style.css')
 }
 
 // Создаем экземпляры приложения, роутера, Pinia и Head
