@@ -9,8 +9,10 @@ import Vue3Marquee from 'vue3-marquee'
 const app = createApp(App)
 
 // Импорт основных стилей
-import './assets/styles/main.css'
-import './style.css'
+const loadStyles = async () => {
+  await import('./assets/styles/main.css')
+  await import('./style.css')
+}
 
 // Создаем экземпляры приложения, роутера, Pinia и Head
 const pinia = createPinia()
@@ -28,3 +30,5 @@ app.provide('siteDescription', 'Маркетинговое агентство, �
 
 // Монтируем приложение
 app.mount('#app')
+
+loadStyles()
