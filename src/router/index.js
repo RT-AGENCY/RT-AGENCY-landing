@@ -77,6 +77,15 @@ const routes = [
     },
   },
   {
+    path: '/reklama-nedvizhimosti',
+    name: 'RealEstateLanding',
+    component: () => import('../pages/landings/RealEstateLanding.vue'),
+    meta: {
+      title: 'Реклама недвижимости в Яндекс Директ | RT-AGENCY',
+      description: 'Снижаем CPL в 3 раза для застройщиков и девелоперов. Кейсы ПИК, Самолет, Абсолют.'
+    }
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
     component: () => import('../pages/NotFoundPage.vue'),
