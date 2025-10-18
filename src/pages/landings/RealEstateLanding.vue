@@ -538,6 +538,145 @@
 
 <script setup>
 import { ref, reactive } from 'vue';
+import { useMeta } from '@/composables/useMeta';
+
+useMeta({
+  meta: [
+    {
+      name: 'keywords',
+      content:
+        'реклама недвижимости, яндекс директ недвижимость, контекстная реклама новостройки, продвижение застройщика, реклама квартир, маркетинг недвижимости, лиды недвижимость, снижение CPL, продажа домов реклама, земельные участки реклама, коттеджные поселки маркетинг',
+    },
+    { name: 'author', content: 'RT-AGENCY' },
+    { 'http-equiv': 'content-language', content: 'ru' },
+    { name: 'robots', content: 'index, follow' },
+    { name: 'geo.region', content: 'RU' },
+    { name: 'geo.placename', content: 'Россия' },
+    { name: 'target', content: 'all' },
+    { name: 'audience', content: 'all' },
+    { name: 'distribution', content: 'global' },
+  ],
+  link: [
+    {
+      rel: 'alternate',
+      href: 'https://rt-ads.ru/reklama-nedvizhimosti',
+      hreflang: 'ru',
+    },
+    { rel: 'canonical', href: 'https://rt-ads.ru/reklama-nedvizhimosti' },
+  ],
+  title:
+    'Реклама недвижимости в Яндекс Директ | Снижаем CPL в 3 раза | RT-AGENCY',
+  description:
+    'Настраиваем рекламу недвижимости в Яндекс Директ. Снижаем CPL с 3500₽ до 1200₽ за 6 недель. Кейсы ПИК, Самолет, Абсолют. Бесплатный аудит.',
+  ogType: 'website',
+  ogImage: 'https://rt-ads.ru/images/real-estate-landing-preview.jpg',
+  ogUrl: 'https://rt-ads.ru/reklama-nedvizhimosti',
+  ogSiteName: 'RT-AGENCY',
+  twitterCard: 'summary_large_image',
+  // Schema.org разметка для услуг недвижимости
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Реклама недвижимости в Яндекс Директ',
+    description:
+      'Профессиональная настройка рекламы недвижимости в Яндекс Директ. Специализируемся на продвижении новостроек, коттеджных поселков, земельных участков и модульных домов.',
+    provider: {
+      '@type': 'Organization',
+      name: 'RT-AGENCY',
+      url: 'https://rt-ads.ru',
+      logo: 'https://rt-ads.ru/logo.svg',
+      email: 'hello@rt-agency.ru',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Москва',
+        addressCountry: 'RU',
+      },
+      sameAs: [
+        'https://t.me/RT_adAGENCY',
+      ],
+    },
+    serviceType: 'Контекстная реклама недвижимости',
+    areaServed: {
+      '@type': 'Country',
+      name: 'Россия',
+    },
+    audience: {
+      '@type': 'Audience',
+      audienceType: 'Застройщики, девелоперы, агентства недвижимости',
+    },
+    offers: {
+      '@type': 'Offer',
+      description: 'Настройка рекламы недвижимости с гарантией снижения CPL',
+      priceRange: 'от 50000 ₽',
+      priceCurrency: 'RUB',
+      availability: 'https://schema.org/InStock',
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Услуги по рекламе недвижимости',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Реклама новостроек',
+            description: 'Контекстная реклама квартир в новостройках',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Продвижение коттеджных поселков',
+            description: 'Реклама загородной недвижимости и земельных участков',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Реклама модульных домов',
+            description: 'Продвижение каркасных и модульных домов',
+          },
+        },
+      ],
+    },
+    review: [
+      {
+        '@type': 'Review',
+        author: {
+          '@type': 'Organization',
+          name: 'Группа ПИК',
+        },
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: 5,
+          bestRating: 5,
+        },
+        reviewBody: 'CPL снизился с 3500₽ до 1200₽, конверсия выросла до 4.1%',
+      },
+      {
+        '@type': 'Review',
+        author: {
+          '@type': 'Organization',
+          name: 'Самолёт',
+        },
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: 5,
+          bestRating: 5,
+        },
+        reviewBody: 'Заявок стало на 270% больше за 6 недель',
+      },
+    ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: 4.9,
+      reviewCount: 15,
+      bestRating: 5,
+    },
+  },
+});
 
 // Реактивные данные для формы
 const form = reactive({
@@ -823,7 +962,7 @@ input {
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .real-estate-landing {
     margin-top: 50px;
   }
@@ -831,7 +970,6 @@ input {
     padding: 10px !important;
   }
   form input {
-
   }
 }
 </style>
