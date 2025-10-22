@@ -1,8 +1,5 @@
-// src/router/index.js
-
 import { createRouter, createWebHistory } from 'vue-router'
 
-// Импортируем массив routes (то, что вы приводили в своём сообщении)
 const routes = [
   {
     path: '/',
@@ -13,25 +10,6 @@ const routes = [
       description: 'Маркетинговое агентство, специализирующееся на performance-маркетинге',
     },
   },
-  // Примеры закомментированных маршрутов можно раскомментировать при необходимости
-  // {
-  //   path: '/services',
-  //   name: 'services',
-  //   component: () => import('../pages/ServicesPage.vue'),
-  //   meta: {
-  //     title: 'Услуги | RT-AGENCY',
-  //     description: 'Полный спектр услуг по digital-маркетингу: контекстная и таргетированная реклама, SEO, CRO',
-  //   },
-  // },
-  // {
-  //   path: '/services/:slug',
-  //   name: 'service-detail',
-  //   component: () => import('../pages/ServiceDetailPage.vue'),
-  //   meta: {
-  //     title: 'Услуга | RT-AGENCY',
-  //     description: 'Подробное описание услуги с кейсами и результатами',
-  //   },
-  // },
   {
     path: '/cases',
     name: 'cases',
@@ -80,15 +58,6 @@ const routes = [
     name: 'contacts',
     component: () => import('../pages/ContactsPage.vue'),
   },
-  // {
-  //   path: '/pricing',
-  //   name: 'pricing',
-  //   component: () => import('../pages/PricingPage.vue'),
-  //   meta: {
-  //     title: 'Тарифы | RT-AGENCY',
-  //     description: 'Стоимость услуг и условия сотрудничества',
-  //   },
-  // },
   {
     path: '/privacy',
     name: 'privacy',
@@ -107,15 +76,25 @@ const routes = [
       description: 'Правила и положения, регулирующие использование веб-сайта RT-AGENCY.',
     },
   },
-  // {
-  //   path: '/search',
-  //   name: 'search',
-  //   component: () => import('../pages/SearchPage.vue'),
-  //   meta: {
-  //     title: 'Поиск | RT-AGENCY',
-  //     description: 'Поиск по сайту',
-  //   },
-  // },
+  {
+    path: '/reklama-nedvizhimosti',
+    name: 'RealEstateLanding',
+    component: () => import('../pages/landings/RealEstateLanding.vue'),
+    meta: {
+      title: 'Реклама недвижимости в Яндекс Директ | RT-AGENCY',
+      description: 'Снижаем CPL в 3 раза для застройщиков и девелоперов. Кейсы ПИК, Самолет, Абсолют.'
+    }
+  },
+  {
+    path: '/thank-you',
+    name: 'ThanksRealEstateLanding',
+    component: () => import('../pages/landings/ThankYouPage.vue'),
+    meta: {
+      title: 'Спасибо за заявку! | RT-AGENCY',
+      description: 'Ваша заявка успешно отправлена. Наш специалист свяжется с вами в ближайшее время.',
+      robots: 'noindex, nofollow',
+    }
+  },
   {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
@@ -127,12 +106,10 @@ const routes = [
   },
 ]
 
-// Создаём роутер с поддержкой истории браузера и прокрутки по якорям
 const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
-    // Если браузер сохранил позицию (нажатие «назад»/«вперёд») — возвращаем её:
     if (savedPosition) {
       return savedPosition
     }
