@@ -86,6 +86,16 @@ const routes = [
     }
   },
   {
+    path: '/thank-you',
+    name: 'ThanksRealEstateLanding',
+    component: () => import('../pages/landings/ThankYouPage.vue'),
+    meta: {
+      title: 'Спасибо за заявку! | RT-AGENCY',
+      description: 'Ваша заявка успешно отправлена. Наш специалист свяжется с вами в ближайшее время.',
+      robots: 'noindex, nofollow',
+    }
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
     component: () => import('../pages/NotFoundPage.vue'),

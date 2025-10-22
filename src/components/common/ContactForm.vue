@@ -17,7 +17,7 @@
 
 
       <!-- Перенаправление после отправки -->
-      <input type="hidden" name="_next" value="https://rt-ads.ru" />
+      <input type="hidden" name="_next" value="https://rt-ads.ru/thank-you" />
 
       <!-- Поле-ловушка для ботов (для FormSubmit) -->
       <input type="text" name="_honey" style="display: none" />

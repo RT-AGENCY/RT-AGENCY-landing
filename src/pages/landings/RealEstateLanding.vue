@@ -539,7 +539,9 @@
 <script setup>
 import { ref, reactive } from 'vue';
 import { useMeta } from '@/composables/useMeta';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 useMeta({
   meta: [
     {
@@ -774,10 +776,7 @@ const submitForm = async () => {
       // Отправляем событие в аналитику (если настроена)
       trackFormSubmission();
 
-      // Автоматически скрываем сообщение об успехе через 5 секунд
-      setTimeout(() => {
-        submitSuccess.value = false;
-      }, 5000);
+      router.push('/thank-you');
     } else {
       throw new Error(result.message || 'Неизвестная ошибка сервера');
     }
